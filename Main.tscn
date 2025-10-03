@@ -1,0 +1,63 @@
+[gd_scene load_steps=11 format=3 uid="uid://bdpusdcqolj4k"]
+
+[ext_resource type="PackedScene" uid="uid://b3aeowc7ip7ew" path="res://Assest/Screen/Grass Tile.glb" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://blv5rx3mbwubc" path="res://Assest/Screen/Big Barn.glb" id="2_r0du0"]
+[ext_resource type="PackedScene" uid="uid://bo385xlv7lwvr" path="res://Assest/Screen/Flower Bed.glb" id="3_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://wak0qwl2nxmp" path="res://Assest/Screen/Tree.glb" id="4_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://bnc0vpliuk2ng" path="res://Assest/Screen/Rock.glb" id="5_lgr22"]
+[ext_resource type="PackedScene" uid="uid://dpvq0mrpxjmtm" path="res://Assest/Screen/Road.glb" id="6_3dxm6"]
+[ext_resource type="PackedScene" uid="uid://dkw4tvu7j6pfe" path="res://Assest/Screen/Airplane.glb" id="7_lgr22"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_glv2v"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_uu6xs"]
+sky_material = SubResource("ProceduralSkyMaterial_glv2v")
+
+[sub_resource type="Environment" id="Environment_r0du0"]
+background_mode = 2
+background_energy_multiplier = 1.2
+sky = SubResource("Sky_uu6xs")
+tonemap_mode = 2
+glow_enabled = true
+glow_strength = 1.09
+glow_blend_mode = 1
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_r0du0")
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="Floor" type="Node3D" parent="Map"]
+
+[node name="Grass Tile" parent="Map/Floor" instance=ExtResource("1_glv2v")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -0.0105285, -2.83676, -0.0260442)
+metadata/_edit_lock_ = true
+
+[node name="Root Scene" parent="Map/Floor" instance=ExtResource("3_cm0pq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.185529, 0, 4.34668)
+
+[node name="Big Barn" parent="Map/Floor" instance=ExtResource("2_r0du0")]
+transform = Transform3D(-0.959092, 0, -0.283095, 0, 1, 0, 0.283095, 0, -0.959092, 4.01743, -0.857919, 14.4311)
+
+[node name="Tree" parent="Map/Floor" instance=ExtResource("4_cm0pq")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -3.08355, -1.45711, 13.8952)
+
+[node name="Rock" parent="Map/Floor" instance=ExtResource("5_lgr22")]
+transform = Transform3D(-0.873339, 0, -0.487113, 0, 1, 0, 0.487113, 0, -0.873339, -1.57094, 0.302047, 13.0575)
+
+[node name="Shop" type="Node3D" parent="Map"]
+
+[node name="CameraPosition" type="Marker3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CameraPosition"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.585548, 0)
+
+[node name="Road2" parent="CameraPosition" instance=ExtResource("6_3dxm6")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -12.1818, -1.43266, -0.549031)
+
+[node name="Airplane" parent="CameraPosition" instance=ExtResource("7_lgr22")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -12.9276, 2.14659, 0.86247)
