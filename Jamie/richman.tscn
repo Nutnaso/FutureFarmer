@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://u7tqmw7pjl14"]
+
+[ext_resource type="PackedScene" uid="uid://cqayqwvja5rpb" path="res://Assest/Person/Business Man.glb" id="1_w3nad"]
+
+[node name="richman" type="Node3D"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Root Scene" parent="Pivot" instance=ExtResource("1_w3nad")]

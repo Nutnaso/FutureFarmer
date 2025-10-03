@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cflrqx75nmrbj"]
+
+[ext_resource type="PackedScene" uid="uid://b70c53hh1upy" path="res://Assest/Person/Beach Character.glb" id="1_hti10"]
+
+[node name="lazyBoy" type="Node3D"]
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Root Scene" parent="Pivot" instance=ExtResource("1_hti10")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
