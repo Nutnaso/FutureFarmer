@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bdpusdcqolj4k"]
+[gd_scene load_steps=12 format=3 uid="uid://bdpusdcqolj4k"]
 
 [ext_resource type="PackedScene" uid="uid://b3aeowc7ip7ew" path="res://Assest/Screen/Grass Tile.glb" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://c4w21wcn5yqui" path="res://main.gd" id="1_trn2v"]
 [ext_resource type="PackedScene" uid="uid://blv5rx3mbwubc" path="res://Assest/Screen/Big Barn.glb" id="2_r0du0"]
 [ext_resource type="PackedScene" uid="uid://bo385xlv7lwvr" path="res://Assest/Screen/Flower Bed.glb" id="3_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://wak0qwl2nxmp" path="res://Assest/Screen/Tree.glb" id="4_cm0pq"]
@@ -25,6 +26,7 @@ glow_strength = 1.09
 glow_blend_mode = 1
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_trn2v")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_r0du0")
@@ -51,13 +53,40 @@ transform = Transform3D(-0.873339, 0, -0.487113, 0, 1, 0, 0.487113, 0, -0.873339
 
 [node name="Shop" type="Node3D" parent="Map"]
 
+[node name="Road2" parent="Map" instance=ExtResource("6_3dxm6")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -12.1818, -1.43266, -0.549031)
+
+[node name="Airplane" parent="Map" instance=ExtResource("7_lgr22")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -12.9276, 2.14659, 0.86247)
+
 [node name="CameraPosition" type="Marker3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="CameraPosition"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.585548, 0)
 
-[node name="Road2" parent="CameraPosition" instance=ExtResource("6_3dxm6")]
-transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -12.1818, -1.43266, -0.549031)
+[node name="Menu" type="CanvasLayer" parent="."]
 
-[node name="Airplane" parent="CameraPosition" instance=ExtResource("7_lgr22")]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -12.9276, 2.14659, 0.86247)
+[node name="Farm" type="Button" parent="Menu"]
+offset_left = 258.0
+offset_top = 859.0
+offset_right = 476.0
+offset_bottom = 921.0
+text = "Farm"
+
+[node name="Shop" type="Button" parent="Menu"]
+offset_left = 20.0
+offset_top = 860.0
+offset_right = 189.0
+offset_bottom = 922.0
+text = "Shop"
+
+[node name="Station" type="Button" parent="Menu"]
+offset_left = 546.0
+offset_top = 861.0
+offset_right = 709.0
+offset_bottom = 923.0
+text = "Station"
+
+[connection signal="pressed" from="Menu/Farm" to="." method="_on_farm_pressed"]
+[connection signal="pressed" from="Menu/Shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="Menu/Station" to="." method="_on_station_pressed"]
