@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://wtbphns4htip"]
+
+[ext_resource type="ArrayMesh" uid="uid://db2gmbpbgra02" path="res://Assest/fruitsandvegetables/obj/applered01.obj" id="1_oaayq"]
+
+[node name="applered" type="Node3D"]
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Applered01" type="MeshInstance3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0412598, 0)
+mesh = ExtResource("1_oaayq")
+skeleton = NodePath("../..")

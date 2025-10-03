@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy5lpxk1jcgd4"]
+
+[ext_resource type="ArrayMesh" uid="uid://duds3rspb2u7c" path="res://Assest/fruitsandvegetables/obj/cabbage01.obj" id="1_iuhr8"]
+
+[node name="Cabbage" type="Node3D"]
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Cabbage01" type="MeshInstance3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.070069, 0)
+mesh = ExtResource("1_iuhr8")
+skeleton = NodePath("../..")

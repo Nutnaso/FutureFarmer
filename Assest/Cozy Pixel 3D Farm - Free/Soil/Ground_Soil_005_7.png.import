@@ -1,0 +1,37 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://r6rt36muqkg6"
+path="res://.godot/imported/Ground_Soil_005_7.png-53889297d71f2ec299d2a2a484a26ee5.ctex"
+metadata={
+"vram_texture": false
+}
+generator_parameters={
+"md5": "89ab8339653a4e0a453b410e9c2609f7"
+}
+
+[deps]
+
+source_file="res://Assest/Cozy Pixel 3D Farm - Free/Soil/Ground_Soil_005_7.png"
+dest_files=["res://.godot/imported/Ground_Soil_005_7.png-53889297d71f2ec299d2a2a484a26ee5.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
