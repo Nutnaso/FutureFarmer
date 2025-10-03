@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c56dahl6ax2h4"]
+
+[ext_resource type="PackedScene" uid="uid://tnhrfey7srq" path="res://Assest/Person/Man in Long Sleeves.glb" id="1_j8aii"]
+
+[node name="back2" type="Node3D"]
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Root Scene" parent="Pivot" instance=ExtResource("1_j8aii")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
