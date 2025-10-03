@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://um6x2m01osk5"
+path="res://.godot/imported/garlic02.obj-4efc854b2fe3e1c2a8f10dead976e128.mesh"
+
+[deps]
+
+files=["res://.godot/imported/garlic02.obj-4efc854b2fe3e1c2a8f10dead976e128.mesh"]
+
+source_file="res://Assest/fruitsandvegetables/obj/garlic02.obj"
+dest_files=["res://.godot/imported/garlic02.obj-4efc854b2fe3e1c2a8f10dead976e128.mesh", "res://.godot/imported/garlic02.obj-4efc854b2fe3e1c2a8f10dead976e128.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

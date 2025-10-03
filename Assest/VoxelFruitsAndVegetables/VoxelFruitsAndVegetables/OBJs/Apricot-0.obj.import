@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://qlnoc7byqgk7"
+path="res://.godot/imported/Apricot-0.obj-371fb78d0d4ba93e11ec84fef20a49cc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Apricot-0.obj-371fb78d0d4ba93e11ec84fef20a49cc.mesh"]
+
+source_file="res://Assest/VoxelFruitsAndVegetables/VoxelFruitsAndVegetables/OBJs/Apricot-0.obj"
+dest_files=["res://.godot/imported/Apricot-0.obj-371fb78d0d4ba93e11ec84fef20a49cc.mesh", "res://.godot/imported/Apricot-0.obj-371fb78d0d4ba93e11ec84fef20a49cc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

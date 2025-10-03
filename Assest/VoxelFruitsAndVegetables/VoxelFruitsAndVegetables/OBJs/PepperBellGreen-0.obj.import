@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dowob10oihur7"
+path="res://.godot/imported/PepperBellGreen-0.obj-b7b207ffcdab10f4a01338d1198d04fb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/PepperBellGreen-0.obj-b7b207ffcdab10f4a01338d1198d04fb.mesh"]
+
+source_file="res://Assest/VoxelFruitsAndVegetables/VoxelFruitsAndVegetables/OBJs/PepperBellGreen-0.obj"
+dest_files=["res://.godot/imported/PepperBellGreen-0.obj-b7b207ffcdab10f4a01338d1198d04fb.mesh", "res://.godot/imported/PepperBellGreen-0.obj-b7b207ffcdab10f4a01338d1198d04fb.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

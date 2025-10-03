@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://frudxtkvp51r"
+path="res://.godot/imported/Melon-0.obj-5f057f9563193c2db756726f1ac954fb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Melon-0.obj-5f057f9563193c2db756726f1ac954fb.mesh"]
+
+source_file="res://Assest/VoxelFruitsAndVegetables/VoxelFruitsAndVegetables/OBJs/Melon-0.obj"
+dest_files=["res://.godot/imported/Melon-0.obj-5f057f9563193c2db756726f1ac954fb.mesh", "res://.godot/imported/Melon-0.obj-5f057f9563193c2db756726f1ac954fb.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

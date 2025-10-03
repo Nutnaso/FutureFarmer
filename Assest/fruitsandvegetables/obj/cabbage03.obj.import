@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://tviijr6ea5vc"
+path="res://.godot/imported/cabbage03.obj-d93e6cca0bf3c7b8f3a6ce717561eebd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cabbage03.obj-d93e6cca0bf3c7b8f3a6ce717561eebd.mesh"]
+
+source_file="res://Assest/fruitsandvegetables/obj/cabbage03.obj"
+dest_files=["res://.godot/imported/cabbage03.obj-d93e6cca0bf3c7b8f3a6ce717561eebd.mesh", "res://.godot/imported/cabbage03.obj-d93e6cca0bf3c7b8f3a6ce717561eebd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
