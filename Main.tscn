@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bdpusdcqolj4k"]
+[gd_scene load_steps=23 format=3 uid="uid://bdpusdcqolj4k"]
 
 [ext_resource type="PackedScene" uid="uid://b3aeowc7ip7ew" path="res://Assest/Screen/Grass Tile.glb" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://c4w21wcn5yqui" path="res://main.gd" id="1_trn2v"]
@@ -8,8 +8,20 @@
 [ext_resource type="PackedScene" uid="uid://bnc0vpliuk2ng" path="res://Assest/Screen/Rock.glb" id="5_lgr22"]
 [ext_resource type="PackedScene" uid="uid://dpvq0mrpxjmtm" path="res://Assest/Screen/Road.glb" id="6_3dxm6"]
 [ext_resource type="PackedScene" uid="uid://dkw4tvu7j6pfe" path="res://Assest/Screen/Airplane.glb" id="7_lgr22"]
+[ext_resource type="PackedScene" uid="uid://bsy321x5ilav3" path="res://Assest/Screen/Cart.glb" id="9_20pc6"]
+[ext_resource type="PackedScene" uid="uid://cfl3owr2otcw2" path="res://Assest/Screen/Crate.glb" id="10_5vvyt"]
+[ext_resource type="PackedScene" uid="uid://1i8fsfbvpbnl" path="res://Assest/Screen/Market Stalls.glb" id="11_c6i3y"]
+[ext_resource type="PackedScene" uid="uid://ei6jyi53df48" path="res://Assest/Screen/Truck (1).glb" id="12_c6i3y"]
+[ext_resource type="PackedScene" uid="uid://cc6qg513loacg" path="res://Assest/Screen/Jet.glb" id="13_c2ibq"]
+[ext_resource type="PackedScene" uid="uid://bwvq0i8rwrj5v" path="res://Assest/Screen/Table.glb" id="13_sc1dx"]
+[ext_resource type="PackedScene" uid="uid://ck88py3mlqab6" path="res://Assest/Screen/Tree Trunk.glb" id="14_j4qnp"]
+[ext_resource type="PackedScene" uid="uid://6a3e7r107p35" path="res://Assest/Screen/Radio.glb" id="15_fpfj3"]
+[ext_resource type="PackedScene" uid="uid://cmp6kgbfarh3q" path="res://Assest/Screen/kaijyu.glb" id="16_fpfj3"]
+[ext_resource type="AudioStream" uid="uid://bm0joqvkjsgdd" path="res://Assest/SFX/fighter-jet-overhead-355468.mp3" id="18_kjvhd"]
+[ext_resource type="AudioStream" uid="uid://5t2jat85wmfy" path="res://Assest/SFX/Intro.mp3" id="19_5tuhn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_glv2v"]
+sky_top_color = Color(0.502366, 0.669596, 0.64412, 1)
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
 ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
 
@@ -27,6 +39,11 @@ glow_blend_mode = 1
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_trn2v")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.225439, 0.446293, 0.150761, 0.733309, 0.66297, -0.47673, 0.641432, -0.601077, 0, 0, 0)
+light_energy = 0.2
+shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_r0du0")
@@ -51,6 +68,15 @@ transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -3.08355, -1.45711, 
 [node name="Rock" parent="Map/Floor" instance=ExtResource("5_lgr22")]
 transform = Transform3D(-0.873339, 0, -0.487113, 0, 1, 0, 0.487113, 0, -0.873339, -1.57094, 0.302047, 13.0575)
 
+[node name="Tree2" parent="Map/Floor" instance=ExtResource("4_cm0pq")]
+transform = Transform3D(-0.0193285, 0, -0.00513895, 0, 0.02, 0, 0.00513895, 0, -0.0193285, 9.3059, -1.45711, 0.485572)
+
+[node name="Rock2" parent="Map/Floor" instance=ExtResource("5_lgr22")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -3.62228, 0, -9.16127)
+
+[node name="Rock3" parent="Map/Floor" instance=ExtResource("5_lgr22")]
+transform = Transform3D(4.13359, 0, -9.10568, 0, 10, 0, 9.10568, 0, 4.13359, 8.43556, 0, -10.2198)
+
 [node name="Shop" type="Node3D" parent="Map"]
 
 [node name="Road2" parent="Map" instance=ExtResource("6_3dxm6")]
@@ -59,12 +85,41 @@ transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 
 [node name="Airplane" parent="Map" instance=ExtResource("7_lgr22")]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -12.9276, 2.14659, 0.86247)
 
+[node name="Root Scene" parent="Map" instance=ExtResource("9_20pc6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.966828, 0, 0.023828)
+
+[node name="Root Scene2" parent="Map" instance=ExtResource("10_5vvyt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22642, 0, 1.47426)
+
+[node name="Root Scene3" parent="Map" instance=ExtResource("11_c6i3y")]
+transform = Transform3D(-1.99472, 0, 0.145223, 0, 2, 0, -0.145223, 0, -1.99472, 2.82527, -0.139185, -0.612489)
+
+[node name="Truck" parent="Map" instance=ExtResource("12_c6i3y")]
+transform = Transform3D(-4.66414, 0.248741, -1.78434, 0.299966, 4.99021, -0.0884441, 1.77645, -0.189552, -4.66994, -0.0282915, 0.227707, -2.16649)
+
+[node name="Tree Trunk" parent="Map" instance=ExtResource("14_j4qnp")]
+transform = Transform3D(0.655031, 0, -0.755602, 0, 1, 0, 0.755602, 0, 0.655031, -2.10085, 0, 4.71756)
+
+[node name="Root Scene4" parent="Map" instance=ExtResource("15_fpfj3")]
+transform = Transform3D(-0.24889, 0, 0.167493, 0, 0.3, 0, -0.167493, 0, -0.24889, -2.03457, 0.264263, 4.61681)
+
+[node name="Root Scene5" parent="Map" instance=ExtResource("13_sc1dx")]
+transform = Transform3D(-0.0299835, 0.125988, 0.482937, -0.00189845, 0.483775, -0.126324, -0.499097, -0.00940895, -0.0285321, -1.0185, 0.237041, 0.0418916)
+
 [node name="CameraPosition" type="Marker3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="CameraPosition"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.585548, 0)
+transform = Transform3D(-0.999391, 0, -0.0348995, 0, 1, 0, 0.0348995, 0, -0.999391, 0, 0.585548, 0)
 
 [node name="Menu" type="CanvasLayer" parent="."]
+
+[node name="Escape" type="Button" parent="Menu"]
+modulate = Color(0.999999, 0.152423, 0.0974169, 1)
+offset_left = 242.0
+offset_top = 764.0
+offset_right = 488.0
+offset_bottom = 836.0
+text = "Escape"
 
 [node name="Farm" type="Button" parent="Menu"]
 offset_left = 258.0
@@ -87,6 +142,137 @@ offset_right = 709.0
 offset_bottom = 923.0
 text = "Station"
 
+[node name="FarmMenu" type="CanvasLayer" parent="Menu"]
+visible = false
+
+[node name="GrowPlant" type="Button" parent="Menu/FarmMenu"]
+modulate = Color(0.571769, 1, 0.47365, 0.141176)
+offset_left = 128.0
+offset_top = 162.0
+offset_right = 572.0
+offset_bottom = 711.0
+
+[node name="OptionButton" type="OptionButton" parent="Menu/FarmMenu"]
+offset_left = 47.0
+offset_top = 20.0
+offset_right = 674.0
+offset_bottom = 91.0
+selected = 0
+item_count = 1
+popup/item_0/text = "Non Select"
+popup/item_0/id = 0
+
+[node name="ShopMenu" type="CanvasLayer" parent="Menu"]
+visible = false
+
+[node name="BuyButton" type="Button" parent="Menu/ShopMenu"]
+modulate = Color(0.571769, 1, 0.47365, 0.141176)
+offset_left = 128.0
+offset_top = 568.0
+offset_right = 572.0
+offset_bottom = 711.0
+text = "BUY"
+
+[node name="ShopOptionButton" type="OptionButton" parent="Menu/ShopMenu"]
+offset_left = 47.0
+offset_top = 20.0
+offset_right = 674.0
+offset_bottom = 91.0
+selected = 0
+item_count = 1
+popup/item_0/text = "Non Select"
+popup/item_0/id = 0
+
+[node name="StationMenu" type="CanvasLayer" parent="Menu"]
+visible = false
+
+[node name="SellButton" type="Button" parent="Menu/StationMenu"]
+modulate = Color(0.571769, 1, 0.47365, 0.141176)
+offset_left = 128.0
+offset_top = 568.0
+offset_right = 572.0
+offset_bottom = 711.0
+theme_override_font_sizes/font_size = 80
+text = "Sell"
+
+[node name="QuestLabel" type="Label" parent="Menu/StationMenu"]
+self_modulate = Color(0.577008, 0.577008, 0.577008, 1)
+offset_left = 199.0
+offset_top = 172.0
+offset_right = 519.0
+offset_bottom = 375.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+
+[node name="Score" type="Label" parent="Menu"]
+offset_left = 23.0
+offset_top = 754.0
+offset_right = 127.0
+offset_bottom = 829.0
+theme_override_font_sizes/font_size = 30
+text = "score"
+
+[node name="Time" type="Label" parent="Menu"]
+offset_left = 258.0
+offset_top = 97.0
+offset_right = 427.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="CurrentSeed" type="Label" parent="Menu"]
+offset_left = 13.0
+offset_top = 114.0
+offset_right = 114.0
+offset_bottom = 794.0
+
+[node name="Harvested" type="Label" parent="Menu"]
+offset_left = 593.0
+offset_top = 97.0
+offset_right = 705.0
+offset_bottom = 777.0
+
+[node name="IntroBlacksceen" type="ColorRect" parent="Menu"]
+offset_left = -38.0
+offset_top = -56.0
+offset_right = 759.0
+offset_bottom = 1026.0
+color = Color(0, 0, 0, 1)
+
+[node name="Start" type="Button" parent="Menu/IntroBlacksceen"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 285.0
+offset_right = 612.0
+offset_bottom = 672.0
+theme_override_font_sizes/font_size = 80
+text = "start"
+
+[node name="kaijyu" parent="." instance=ExtResource("16_fpfj3")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -0.0345001, 6.03012, 180.984)
+
+[node name="Jet" parent="." instance=ExtResource("13_c2ibq")]
+visible = false
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Jet" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("18_kjvhd")
+volume_db = -9.494
+pitch_scale = 0.57
+
+[node name="Intro" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("19_5tuhn")
+volume_db = -9.494
+
+[connection signal="pressed" from="Menu/Escape" to="." method="_on_escape_pressed"]
 [connection signal="pressed" from="Menu/Farm" to="." method="_on_farm_pressed"]
 [connection signal="pressed" from="Menu/Shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="Menu/Station" to="." method="_on_station_pressed"]
+[connection signal="pressed" from="Menu/FarmMenu/GrowPlant" to="." method="_on_grow_plant_pressed"]
+[connection signal="item_selected" from="Menu/FarmMenu/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="Menu/ShopMenu/BuyButton" to="." method="_on_buy_button_pressed"]
+[connection signal="item_selected" from="Menu/ShopMenu/ShopOptionButton" to="." method="_on_shop_option_button_item_selected"]
+[connection signal="pressed" from="Menu/StationMenu/SellButton" to="." method="_on_sell_button_pressed"]
+[connection signal="pressed" from="Menu/IntroBlacksceen/Start" to="." method="_on_start_pressed"]
