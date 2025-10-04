@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bdpusdcqolj4k"]
+[gd_scene load_steps=27 format=3 uid="uid://bdpusdcqolj4k"]
 
 [ext_resource type="PackedScene" uid="uid://b3aeowc7ip7ew" path="res://Assest/Screen/Grass Tile.glb" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://c4w21wcn5yqui" path="res://main.gd" id="1_trn2v"]
@@ -16,9 +16,13 @@
 [ext_resource type="PackedScene" uid="uid://bwvq0i8rwrj5v" path="res://Assest/Screen/Table.glb" id="13_sc1dx"]
 [ext_resource type="PackedScene" uid="uid://ck88py3mlqab6" path="res://Assest/Screen/Tree Trunk.glb" id="14_j4qnp"]
 [ext_resource type="PackedScene" uid="uid://6a3e7r107p35" path="res://Assest/Screen/Radio.glb" id="15_fpfj3"]
+[ext_resource type="FontFile" uid="uid://4l8t2v3w1kgt" path="res://paaymaay_regular.ttf" id="16_bg4s2"]
 [ext_resource type="PackedScene" uid="uid://cmp6kgbfarh3q" path="res://Assest/Screen/kaijyu.glb" id="16_fpfj3"]
 [ext_resource type="AudioStream" uid="uid://bm0joqvkjsgdd" path="res://Assest/SFX/fighter-jet-overhead-355468.mp3" id="18_kjvhd"]
 [ext_resource type="AudioStream" uid="uid://5t2jat85wmfy" path="res://Assest/SFX/Intro.mp3" id="19_5tuhn"]
+[ext_resource type="AudioStream" uid="uid://iiafk6ab5jve" path="res://Assest/SFX/kaiju-growl-368657.mp3" id="20_2gh4u"]
+[ext_resource type="AudioStream" uid="uid://fhm13jg6ihqo" path="res://Assest/SFX/Slow Clock.mp3" id="21_3b0ty"]
+[ext_resource type="AudioStream" uid="uid://kyiiir0okkjb" path="res://Assest/SFX/Fast Clock.mp3" id="22_bg4s2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_glv2v"]
 sky_top_color = Color(0.502366, 0.669596, 0.64412, 1)
@@ -114,6 +118,7 @@ transform = Transform3D(-0.999391, 0, -0.0348995, 0, 1, 0, 0.0348995, 0, -0.9993
 [node name="Menu" type="CanvasLayer" parent="."]
 
 [node name="Escape" type="Button" parent="Menu"]
+visible = false
 modulate = Color(0.999999, 0.152423, 0.0974169, 1)
 offset_left = 242.0
 offset_top = 764.0
@@ -146,17 +151,20 @@ text = "Station"
 visible = false
 
 [node name="GrowPlant" type="Button" parent="Menu/FarmMenu"]
-modulate = Color(0.571769, 1, 0.47365, 0.141176)
+modulate = Color(0.572549, 1, 0.47451, 1)
+self_modulate = Color(1, 1, 1, 0.509804)
 offset_left = 128.0
 offset_top = 162.0
 offset_right = 572.0
 offset_bottom = 711.0
+theme_override_font_sizes/font_size = 30
+text = "Press here For Glow a plant"
 
 [node name="OptionButton" type="OptionButton" parent="Menu/FarmMenu"]
-offset_left = 47.0
-offset_top = 20.0
-offset_right = 674.0
-offset_bottom = 91.0
+offset_left = 128.0
+offset_top = 73.0
+offset_right = 568.0
+offset_bottom = 144.0
 selected = 0
 item_count = 1
 popup/item_0/text = "Non Select"
@@ -171,13 +179,14 @@ offset_left = 128.0
 offset_top = 568.0
 offset_right = 572.0
 offset_bottom = 711.0
+theme_override_font_sizes/font_size = 80
 text = "BUY"
 
 [node name="ShopOptionButton" type="OptionButton" parent="Menu/ShopMenu"]
-offset_left = 47.0
-offset_top = 20.0
-offset_right = 674.0
-offset_bottom = 91.0
+offset_left = 159.0
+offset_top = 73.0
+offset_right = 546.0
+offset_bottom = 144.0
 selected = 0
 item_count = 1
 popup/item_0/text = "Non Select"
@@ -195,15 +204,23 @@ offset_bottom = 711.0
 theme_override_font_sizes/font_size = 80
 text = "Sell"
 
-[node name="QuestLabel" type="Label" parent="Menu/StationMenu"]
+[node name="QuestLabel" type="RichTextLabel" parent="Menu/StationMenu"]
 self_modulate = Color(0.577008, 0.577008, 0.577008, 1)
 offset_left = 199.0
-offset_top = 172.0
+offset_top = 103.0
 offset_right = 519.0
-offset_bottom = 375.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+offset_bottom = 359.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 22
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("16_bg4s2")
+theme_override_font_sizes/normal_font_size = 30
+
+[node name="ColorRect" type="ColorRect" parent="Menu/StationMenu/QuestLabel"]
+layout_mode = 0
+offset_left = -90.0
+offset_right = 429.0
+offset_bottom = 195.0
+color = Color(0.662745, 0.537255, 0.835294, 0.243137)
 
 [node name="Score" type="Label" parent="Menu"]
 offset_left = 23.0
@@ -214,11 +231,13 @@ theme_override_font_sizes/font_size = 30
 text = "score"
 
 [node name="Time" type="Label" parent="Menu"]
-offset_left = 258.0
-offset_top = 97.0
-offset_right = 427.0
-offset_bottom = 155.0
-theme_override_font_sizes/font_size = 30
+offset_left = 255.0
+offset_top = 32.0
+offset_right = 424.0
+offset_bottom = 90.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_bg4s2")
+theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 
 [node name="CurrentSeed" type="Label" parent="Menu"]
@@ -226,31 +245,53 @@ offset_left = 13.0
 offset_top = 114.0
 offset_right = 114.0
 offset_bottom = 794.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_bg4s2")
+theme_override_font_sizes/font_size = 25
+
+[node name="ColorRect" type="ColorRect" parent="Menu/CurrentSeed"]
+layout_mode = 0
+offset_right = 109.0
+offset_bottom = 312.0
+color = Color(1, 0.694118, 0.443137, 0.117647)
 
 [node name="Harvested" type="Label" parent="Menu"]
 offset_left = 593.0
 offset_top = 97.0
 offset_right = 705.0
 offset_bottom = 777.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_bg4s2")
+theme_override_font_sizes/font_size = 25
+
+[node name="ColorRect" type="ColorRect" parent="Menu/Harvested"]
+layout_mode = 0
+offset_right = 125.0
+offset_bottom = 349.0
+color = Color(0.0117647, 0.368627, 0, 0.0588235)
 
 [node name="IntroBlacksceen" type="ColorRect" parent="Menu"]
+visible = false
 offset_left = -38.0
 offset_top = -56.0
 offset_right = 759.0
 offset_bottom = 1026.0
 color = Color(0, 0, 0, 1)
 
-[node name="Start" type="Button" parent="Menu/IntroBlacksceen"]
-layout_mode = 0
-offset_left = 171.0
-offset_top = 285.0
-offset_right = 612.0
-offset_bottom = 672.0
+[node name="RealEscape" type="Button" parent="Menu"]
+visible = false
+modulate = Color(0.999999, 0.152423, 0.0974169, 1)
+offset_left = 135.0
+offset_top = 178.0
+offset_right = 558.0
+offset_bottom = 675.0
 theme_override_font_sizes/font_size = 80
-text = "start"
+text = "Confirm 
+Escape"
 
 [node name="kaijyu" parent="." instance=ExtResource("16_fpfj3")]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -0.0345001, 6.03012, 180.984)
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -0.0345001, 6.03012, 29.0857)
+visible = false
 
 [node name="Jet" parent="." instance=ExtResource("13_c2ibq")]
 visible = false
@@ -266,6 +307,18 @@ pitch_scale = 0.57
 stream = ExtResource("19_5tuhn")
 volume_db = -9.494
 
+[node name="Kaiju" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("20_2gh4u")
+volume_db = -9.494
+
+[node name="SlowClock" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("21_3b0ty")
+volume_db = -18.0
+
+[node name="FastClock" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("22_bg4s2")
+volume_db = -18.0
+
 [connection signal="pressed" from="Menu/Escape" to="." method="_on_escape_pressed"]
 [connection signal="pressed" from="Menu/Farm" to="." method="_on_farm_pressed"]
 [connection signal="pressed" from="Menu/Shop" to="." method="_on_shop_pressed"]
@@ -275,4 +328,4 @@ volume_db = -9.494
 [connection signal="pressed" from="Menu/ShopMenu/BuyButton" to="." method="_on_buy_button_pressed"]
 [connection signal="item_selected" from="Menu/ShopMenu/ShopOptionButton" to="." method="_on_shop_option_button_item_selected"]
 [connection signal="pressed" from="Menu/StationMenu/SellButton" to="." method="_on_sell_button_pressed"]
-[connection signal="pressed" from="Menu/IntroBlacksceen/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Menu/RealEscape" to="." method="_on_real_escape_pressed"]

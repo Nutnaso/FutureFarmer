@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://ctxfdw6wql8ne"]
+
+[ext_resource type="Script" uid="uid://bioc06r274ak2" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="FontFile" uid="uid://4l8t2v3w1kgt" path="res://paaymaay_regular.ttf" id="2_l48gv"]
+[ext_resource type="PackedScene" uid="uid://blv5rx3mbwubc" path="res://Assest/Screen/Big Barn.glb" id="2_mae5d"]
+[ext_resource type="PackedScene" uid="uid://b3aeowc7ip7ew" path="res://Assest/Screen/Grass Tile.glb" id="3_4hy44"]
+[ext_resource type="PackedScene" uid="uid://cmp6kgbfarh3q" path="res://Assest/Screen/kaijyu.glb" id="4_ytr4m"]
+[ext_resource type="PackedScene" uid="uid://cc6qg513loacg" path="res://Assest/Screen/Jet.glb" id="5_l48gv"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ytr4m"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_l48gv"]
+sky_material = SubResource("ProceduralSkyMaterial_ytr4m")
+
+[sub_resource type="Environment" id="Environment_ecwwl"]
+background_mode = 2
+sky = SubResource("Sky_l48gv")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Menu" type="Node3D"]
+script = ExtResource("1_lti8b")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ecwwl")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.22544, 0.446296, 0, 0.892586, 0.450877, -0.500003, 0.39047, -0.773, 0, 0, 0)
+light_energy = 2.2
+shadow_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Endstate" type="Label" parent="CanvasLayer"]
+offset_left = 49.0
+offset_top = 34.0
+offset_right = 633.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_l48gv")
+theme_override_font_sizes/font_size = 120
+text = "Five minute
+Farmer"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 119.0
+offset_top = 385.0
+offset_right = 586.0
+offset_bottom = 606.0
+theme_override_fonts/font = ExtResource("2_l48gv")
+theme_override_font_sizes/font_size = 80
+text = "START"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="Big Barn" parent="." instance=ExtResource("2_mae5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.160889, -1.90034, -11.8723)
+
+[node name="Grass Tile" parent="." instance=ExtResource("3_4hy44")]
+transform = Transform3D(20, 0, 0, 0, 19.7653, -3.05489, 0, 3.05489, 19.7653, 0.145597, -2.2292, -21.9412)
+
+[node name="kaijyu" parent="." instance=ExtResource("4_ytr4m")]
+transform = Transform3D(-73.3693, 0, -31.8897, 0, 80, 0, 31.8897, 0, -73.3693, -18.4315, 15.9973, -51.7663)
+
+[node name="Jet" parent="." instance=ExtResource("5_l48gv")]
+transform = Transform3D(-0.256964, -0.966421, 0, 0.966421, -0.256964, 0, 0, 0, 1, 13.3746, 17.152, -31.6423)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

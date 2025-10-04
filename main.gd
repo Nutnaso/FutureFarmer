@@ -5,6 +5,8 @@ extends Node3D
 @onready var plant_pod := $"Map/Floor/Root Scene"
 @onready var score_label := $"Menu/Score"
 @onready var time_label := $"Menu/Time"
+
+@onready var escape := $"Menu/Escape"
 # Farm menu
 @onready var farm_menu := $"Menu/FarmMenu"
 @onready var current_seed := $"Menu/CurrentSeed"
@@ -27,8 +29,12 @@ extends Node3D
 @onready var jet := $"Jet"
 @onready var jet_sound := $"SFX/Jet"
 
+@onready var monster := $"kaijyu"
+@onready var monster_sound := $"SFX/Kaiju"
 
 
+@onready var slow_clock := $"SFX/SlowClock"
+@onready var fast_clock := $SFX/FastClock
 
 
 
@@ -110,6 +116,30 @@ func _ready() -> void:
 	# NPC
 	available_npcs = npc_scenes.duplicate()
 
+	# 🎬 เริ่มเกมทันที (แทนกดปุ่ม Start)
+	_start_game()
+
+func _start_game() -> void:
+	# Intro
+	intro_sceen.visible = true
+	intro_sound.play()
+	
+	var fade_tween = create_tween()
+	fade_tween.tween_property(intro_sceen, "modulate:a", 0.0, 2.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	await fade_tween.finished
+
+	intro_sceen.visible = false
+	farm_menu.visible = true
+	shop_menu.visible = false
+	station_menu.visible = false
+
+	timer_running = true
+
+	_spawn_random_npc()
+	_start_monster()
+# Clock sound
+var clock_timer: float = 0.0
+var clock_interval: float = 1.0  # ทุก 1 วินาที
 
 # ---------------- Process -----------------
 func _process(delta: float) -> void:
@@ -120,6 +150,8 @@ func _process(delta: float) -> void:
 			time_left = 0
 			timer_running = false
 			print("⏰ เวลาเกมหมด!")
+			_game_over("YOU DIE")
+			
 		_update_time_label()
 		
 		# Jet Event
@@ -128,29 +160,70 @@ func _process(delta: float) -> void:
 			if jet_timer >= jet_interval:
 				jet_timer = 0
 				_trigger_jet()
+	# ---------------- Clock Event -----------------
+		clock_timer += delta
+		if clock_timer >= clock_interval:
+			clock_timer = 0
+			# ช่วง 5 - 3 นาที
+			if time_left <= 300 and time_left > 180:
+				if slow_clock:
+					slow_clock.play()
+			# ช่วงน้อยกว่า 3 นาที
+			elif time_left <= 180:
+				if fast_clock:
+					fast_clock.play()
+					
+					
+	# ---------------- Monster Event -----------------
+	if monster_active:
+		monster_timer += delta
+		monster_sound_timer += delta
 
+		if monster_sound_timer >= monster_sound_interval:
+			monster_sound_timer = 0
+			print("🐲 Monster should roar now!")  # Debug
+			if monster_sound:
+				print("✅ Monster sound node OK:", monster_sound)
+				monster_sound.play()
+			else:
+				print("❌ Monster sound node is NULL")
+
+	
+	# Escape event
+	if time_left <= 60 and not escape.visible:
+		escape.visible = true
+	
 	# NPC
 	npc_timer += delta
 	if npc_timer >= npc_interval:
 		npc_timer = 0
 		_spawn_random_npc()
 
+
+
 # ---------------- Update Labels -----------------
 func _update_labels() -> void:
-	# แสดง Seed Inventory แบบหลายบรรทัดเหมือน Harvested
+	# เรียงตามชื่อพืชทั้งหมด
+	var all_names := plant_dict.keys()
+	all_names.sort()
+
+	# Seeds
 	var seed_text := "Seeds:\n"
-	for key in seed_inventory.keys():
-		seed_text += "%s: %d\n" % [key, seed_inventory[key]]
+	for key in all_names:
+		if seed_inventory.has(key):
+			seed_text += "%s: %d\n" % [key, seed_inventory[key]]
 	current_seed.text = seed_text.strip_edges()
 
-	# harvested
+	# Harvested (เฉพาะที่มีแล้ว)
 	var harvested_text := "Harvested:\n"
-	for key in harvested_dict.keys():
-		harvested_text += "%s: %d\n" % [key, harvested_dict[key]]
+	for key in all_names:
+		if harvested_dict.has(key) and harvested_dict[key] > 0:
+			harvested_text += "%s: %d\n" % [key, harvested_dict[key]]
 	Harvested.text = harvested_text.strip_edges()
 
-	# score
-	score_label.text = "💰 %d" % score
+	# Score
+	score_label.text = "Money: %d" % score
+
 
 
 # ---------------- Update Time Label -----------------
@@ -183,21 +256,29 @@ func _on_farm_pressed() -> void:
 	farm_menu.visible = true
 	shop_menu.visible = false
 	station_menu.visible = false
-
+	$Menu/RealEscape.visible = false
+	
 func _on_shop_pressed() -> void:
 	_rotate_camera(Vector3(0, -90, 0))
 	farm_menu.visible = false
 	shop_menu.visible = true
 	station_menu.visible = false
+	$Menu/RealEscape.visible = false
 	
 func _on_station_pressed() -> void:
 	_rotate_camera(Vector3(0, -268, 0))
 	_update_sell_button_state()
+	_update_quest_label()
 	farm_menu.visible = false
 	shop_menu.visible = false
 	station_menu.visible = true
-
+	$Menu/RealEscape.visible = false
+	
 func _on_escape_pressed() -> void:
+	$Menu/RealEscape.visible = true
+	farm_menu.visible = false
+	shop_menu.visible = false
+	station_menu.visible = false
 	_rotate_camera(Vector3(0, 0, 0))
 
 # ---------------- Plant Selection -----------------
@@ -304,7 +385,7 @@ func _on_shop_option_button_item_selected(index: int) -> void:
 
 
 func _on_buy_button_pressed() -> void:
-	if shop_selected_plant == "":
+	if shop_selected_plant == "" or shop_selected_plant == "select plant to buy":
 		print("⚠️ ยังไม่ได้เลือกพืช")
 		return
 	if score < 5:
@@ -315,13 +396,20 @@ func _on_buy_button_pressed() -> void:
 	seed_inventory[shop_selected_plant] += 1
 	print("✅ ซื้อ %s +1 เมล็ด (เหลือเงิน %d)" % [shop_selected_plant, score])
 
-	_refresh_option_buttons()
+	# รีเฟรชเฉพาะฟาร์ม ไม่แตะร้านค้า
+	_refresh_farm_option_button()
 	_update_labels()
-	_update_buy_button_state() # อัปเดตสีปุ่ม
+
+	# --- คงค่าเลือกปัจจุบันของร้านค้า ---
+	for i in range(shop_option_button.item_count):
+		if shop_option_button.get_item_text(i) == shop_selected_plant:
+			shop_option_button.select(i)
+			break
+
+	_update_buy_button_state()
 
 
-# ---------------- Refresh -----------------
-func _refresh_option_buttons() -> void:
+func _refresh_farm_option_button() -> void:
 	var farm_plants := []
 	for name in seed_inventory.keys():
 		if seed_inventory[name] > 0:
@@ -329,15 +417,25 @@ func _refresh_option_buttons() -> void:
 	farm_plants.sort()
 	
 	option_button.clear()
-	option_button.add_item("select your plants") # เพิ่มบนสุด
+	option_button.add_item("select your plants")
 	for name in farm_plants:
 		option_button.add_item(name)
 
+func _refresh_option_buttons() -> void:
+	_refresh_farm_option_button()
+	
+	# --- Shop menu ---
 	var shop_plants := plant_dict.keys()
 	shop_plants.sort()
 	shop_option_button.clear()
+	shop_option_button.add_item("select plant to buy")
 	for name in shop_plants:
 		shop_option_button.add_item(name)
+
+	# reset ตอนเข้าเกม
+	shop_option_button.select(0)
+	shop_selected_plant = ""
+	_update_buy_button_state()
 
 
 # ---------------- Quest / Sell -----------------
@@ -389,11 +487,25 @@ func _generate_random_quest() -> void:
 
 # ---------------- Update Quest Label -----------------
 func _update_quest_label() -> void:
-	var text = "I Want :\n"
+	var text = "[b]I Want :[/b]\n"
 	for plant_name in current_quest.keys():
 		var amount = current_quest[plant_name]
-		text += "%s: %d\n" % [plant_name, amount]
+		
+		# เช็คว่ามีพืชพอไหม
+		var have = 0
+		if harvested_dict.has(plant_name):
+			have = harvested_dict[plant_name]
+		
+		if have >= amount:
+			# พอ → เขียว
+			text += "[color=green]%s: %d (มี %d)[/color]\n" % [plant_name, amount, have]
+		else:
+			# ไม่พอ → แดง
+			text += "[color=red]%s: %d (มี %d)[/color]\n" % [plant_name, amount, have]
+	
+	quest_label.bbcode_enabled = true  # เปิดใช้ BBCode
 	quest_label.text = text.strip_edges()
+
 
 # ---------------- Update Sell Button -----------------
 func _update_sell_button_state() -> void:
@@ -465,25 +577,44 @@ func _trigger_jet() -> void:
 	tween.tween_property(jet, "position", Vector3(1.168, 8.39, 72.522), 5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
 
-func _on_start_pressed() -> void:
-	# ปิดเมนูเริ่มต้น (สมมติว่ามี Start Button ซ่อน intro_screen)
-	intro_sceen.visible = true
-	intro_sound.play() # เล่นเสียง intro
+
 	
-	# Tween ให้หน้าจอดำค่อย ๆ หายไป
-	var fade_tween = create_tween()
-	fade_tween.tween_property(intro_sceen, "modulate:a", 0.0, 2.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+# ---------------- Monster Event -----------------
+var monster_start_pos := Vector3(-0.035, 6.03, 180.98)
+var monster_end_pos   := Vector3(-0.035, 6.03, 29.086)
+var monster_duration: float = 240.0 # 4 นาที
+var monster_timer: float = 0.0
+var monster_sound_interval: float = 30.0 # <<< ครึ่งนาที
+var monster_sound_timer: float = 0.0
+var monster_active: bool = false
+
+
+
+func _start_monster() -> void:
+	monster.visible = true
+	if not monster:
+		return
 	
-	await fade_tween.finished
+	monster.position = monster_start_pos
+	monster.visible = true
+	monster_active = true
+	monster_timer = 0.0
+	monster_sound_timer = 0.0
+	
+	# Tween เคลื่อนที่ 4 นาที
+	var tween = create_tween()
+	tween.tween_property(monster, "position", monster_end_pos, monster_duration).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
 
-	# หลัง intro fade out -> เปิดเมนูหลัก
-	intro_sceen.visible = false
-	farm_menu.visible = true
-	shop_menu.visible = false
-	station_menu.visible = false
+func _game_over(state: String) -> void:
+	# โหลด scene Endgame
+	var end_scene = preload("res://end_game.tscn").instantiate()
+	
+	# ส่งค่าไป Endgame
+	end_scene.set_data(state, harvested_dict, score)
+	
+	get_tree().root.add_child(end_scene)
+	get_tree().current_scene.queue_free()
+	get_tree().current_scene = end_scene
 
-	# เริ่มเวลาเกม
-	timer_running = true
-
-	# สุ่ม NPC ตัวแรก
-	_spawn_random_npc()
+func _on_real_escape_pressed() -> void:
+	_game_over("YOU SURVIVE")
