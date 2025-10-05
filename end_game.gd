@@ -42,5 +42,14 @@ func _update_ui() -> void:
 
 
 func _on_retry_pressed() -> void:
-	var new_scene = preload("res://Main.tscn")  # โหลด scene เป็น PackedScene
+	var path = "res://Main.tscn"
+	if not ResourceLoader.exists(path):
+		push_error("❌ Scene not found at: " + path)
+		return
+
+	var new_scene = load(path)
+	if new_scene == null:
+		push_error("❌ Failed to load scene: " + path)
+		return
+
 	get_tree().change_scene_to_packed(new_scene)

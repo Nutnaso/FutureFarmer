@@ -163,6 +163,42 @@ tracks/8/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Menu/FarmMenu:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Menu/ShopMenu:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Menu/StationMenu:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_3ccbu"]
 length = 0.001
@@ -274,6 +310,42 @@ tracks/8/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Menu/FarmMenu:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Menu/ShopMenu:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Menu/StationMenu:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ny7u2"]
 _data = {
@@ -353,7 +425,7 @@ transform = Transform3D(-0.0299835, 0.125988, 0.482937, -0.00189845, 0.483775, -
 [node name="CameraPosition" type="Marker3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="CameraPosition"]
-transform = Transform3D(-0.999391, 0, -0.0348995, 0, 1, 0, 0.0348995, 0, -0.999391, 0, 0.585548, 0)
+transform = Transform3D(-0.999391, 0, -0.0348956, 0, 1, 0, 0.0348956, 0, -0.999391, 0, 0.585548, 0)
 
 [node name="Menu" type="CanvasLayer" parent="."]
 
@@ -607,7 +679,7 @@ libraries = {
 }
 
 [node name="Missile" parent="." instance=ExtResource("34_vi5kq")]
-transform = Transform3D(-2.87084, 0.144949, 0.858636, -0.688586, -2.18863, -1.93281, 0.533024, -2.04668, 2.12767, 19.1721, 149.464, 102.133)
+transform = Transform3D(-2.87084, 0.144941, 0.858635, -0.688579, -2.18863, -1.93281, 0.53303, -2.04668, 2.12767, 19.1721, 149.464, 102.133)
 
 [node name="IntroBlacksceen" type="ColorRect" parent="."]
 visible = false
