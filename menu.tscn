@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ctxfdw6wql8ne"]
+[gd_scene load_steps=11 format=3 uid="uid://ctxfdw6wql8ne"]
 
 [ext_resource type="Script" uid="uid://bioc06r274ak2" path="res://menu.gd" id="1_lti8b"]
 [ext_resource type="FontFile" uid="uid://4l8t2v3w1kgt" path="res://paaymaay_regular.ttf" id="2_l48gv"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b3aeowc7ip7ew" path="res://Assest/Screen/Grass Tile.glb" id="3_4hy44"]
 [ext_resource type="PackedScene" uid="uid://cmp6kgbfarh3q" path="res://Assest/Screen/kaijyu.glb" id="4_ytr4m"]
 [ext_resource type="PackedScene" uid="uid://cc6qg513loacg" path="res://Assest/Screen/Jet.glb" id="5_l48gv"]
+[ext_resource type="AudioStream" uid="uid://c16lej46f30f0" path="res://Assest/SFX/Menu them.mp3" id="7_ecwwl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ytr4m"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -46,7 +47,7 @@ text = "Five minute
 Farmer"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="CanvasLayer"]
 offset_left = 119.0
 offset_top = 385.0
 offset_right = 586.0
@@ -69,4 +70,8 @@ transform = Transform3D(-73.3693, 0, -31.8897, 0, 80, 0, 31.8897, 0, -73.3693, -
 [node name="Jet" parent="." instance=ExtResource("5_l48gv")]
 transform = Transform3D(-0.256964, -0.966421, 0, 0.966421, -0.256964, 0, 0, 0, 1, 13.3746, 17.152, -31.6423)
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ecwwl")
+volume_db = -6.467
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

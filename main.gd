@@ -1,6 +1,9 @@
 extends Node3D
 
 @onready var camera := $CameraPosition/Camera3D
+@onready var animeton := $AnimationPlayer
+
+
 @onready var option_button := $Menu/FarmMenu/OptionButton
 @onready var plant_pod := $"Map/Floor/Root Scene"
 @onready var score_label := $"Menu/Score"
@@ -23,7 +26,6 @@ extends Node3D
 
 
 # event
-@onready var intro_sound := $"SFX/Intro"
 @onready var intro_sceen := $"Menu/IntroBlacksceen" 
 
 @onready var jet := $"Jet"
@@ -55,6 +57,20 @@ var NPC2 := preload("res://Jamie/back_3.tscn")
 var NPC3 := preload("res://Jamie/farmer.tscn")
 var NPC4 := preload("res://Jamie/lazyboy.tscn")
 var NPC5 := preload("res://Jamie/richman.tscn")
+
+
+
+# preload Voice
+
+@onready var intro_300 := $"Voice/Intro300"
+@onready var news_265 := $"Voice/News265"
+@onready var news_254 := $"Voice/News254"
+@onready var news_200 := $"Voice/News200"
+@onready var news_180 := $"Voice/News180"
+@onready var news_160 := $"Voice/News160"
+@onready var end_game_120 := $"Voice/Endgame120"
+@onready var end_game_60 := $"Voice/Endgame60"
+
 
 # ---------------- Plant / Farm ----------------
 var current_tween: Tween = null
@@ -89,9 +105,15 @@ var seed_inventory := {
 
 var harvested_dict := {}
 var score: int = 50
+# ---------------- Voice Event -----------------
+
+
+var played_voices := []  # เก็บรายการเสียงที่เล่นแล้ว
+
+
 
 # ---------------- Time -----------------
-var time_left: float = 300.0 # ใช้ float จะได้คำนวณ delta ถูกต้อง
+var time_left: float = 300.0# ใช้ float จะได้คำนวณ delta ถูกต้อง
 var timer_running: bool = true
 
 # ---------------- NPC -----------------
@@ -101,9 +123,12 @@ var current_npc: Node3D = null
 var npc_timer: float = 0.0
 var npc_interval: float = 10.0 # เปลี่ยน NPC ทุก 10 วินาที
 
-
+var voice_schedule = {}
+var camera_origin: Vector3
 # ---------------- Ready -----------------
 func _ready() -> void:
+	var camera_origin = camera.position
+	print(camera_origin)
 	# Farm option button
 	for name in plant_dict.keys():
 		option_button.add_item(name)
@@ -117,12 +142,24 @@ func _ready() -> void:
 	available_npcs = npc_scenes.duplicate()
 
 	# 🎬 เริ่มเกมทันที (แทนกดปุ่ม Start)
+	voice_schedule = {
+		300: intro_300,
+		255: news_265,
+		244: news_254,
+		198: news_200,
+		191: news_180,
+		174: news_160,
+		120: end_game_120,
+		60: end_game_60,
+	}
+	
 	_start_game()
+	
+
 
 func _start_game() -> void:
 	# Intro
 	intro_sceen.visible = true
-	intro_sound.play()
 	
 	var fade_tween = create_tween()
 	fade_tween.tween_property(intro_sceen, "modulate:a", 0.0, 2.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
@@ -141,8 +178,19 @@ func _start_game() -> void:
 var clock_timer: float = 0.0
 var clock_interval: float = 1.0  # ทุก 1 วินาที
 
+
 # ---------------- Process -----------------
 func _process(delta: float) -> void:
+	
+	if shake_timer > 0:
+		shake_timer -= delta
+		camera.position = Vector3(0.0, 0.585548, 0.0) + Vector3(
+			randf_range(-shake_amount, shake_amount),
+			randf_range(-shake_amount, shake_amount),
+			randf_range(-shake_amount, shake_amount)
+		)
+	else:
+		camera.position = Vector3(0.0, 0.585548, 0.0)
 	# เวลาเกม
 	if timer_running and time_left > 0:
 		time_left -= delta
@@ -150,9 +198,14 @@ func _process(delta: float) -> void:
 			time_left = 0
 			timer_running = false
 			print("⏰ เวลาเกมหมด!")
+
+			animeton.play("Endgame")
+			await animeton.animation_finished  # ✅ รอจน Animation เล่นจบ
 			_game_over("YOU DIE")
+
 			
 		_update_time_label()
+		_check_voice_triggers()
 		
 		# Jet Event
 		if time_left <= jet_start_time:
@@ -160,6 +213,7 @@ func _process(delta: float) -> void:
 			if jet_timer >= jet_interval:
 				jet_timer = 0
 				_trigger_jet()
+				_shake_camera(8, 0.1)
 	# ---------------- Clock Event -----------------
 		clock_timer += delta
 		if clock_timer >= clock_interval:
@@ -175,18 +229,25 @@ func _process(delta: float) -> void:
 					
 					
 	# ---------------- Monster Event -----------------
+# ---------------- Monster Event -----------------
 	if monster_active:
 		monster_timer += delta
-		monster_sound_timer += delta
 
-		if monster_sound_timer >= monster_sound_interval:
-			monster_sound_timer = 0
-			print("🐲 Monster should roar now!")  # Debug
-			if monster_sound:
-				print("✅ Monster sound node OK:", monster_sound)
-				monster_sound.play()
-			else:
-				print("❌ Monster sound node is NULL")
+		var trigger_times = [270, 210, 150, 90, 30]  # วินาทีที่เหลือ (4:30, 3:30, 2:30, 1:30, 0:30)
+
+		for trigger_time in trigger_times:
+			if time_left <= trigger_time and time_left > trigger_time - 0.2 and not played_voices.has(trigger_time):
+				print("🐲 Monster roar at:", trigger_time)
+				if monster_sound:
+					monster_sound.play()
+					_shake_camera(4, 0.15)
+					played_voices.append(trigger_time)
+				else:
+					print("❌ Monster sound node is NULL")
+
+# ---------------- Voice Trigger -----------------
+	#if time_left >= 259+.01 and time_left <= 300+0.1 :
+		#intro_300.play()
 
 	
 	# Escape event
@@ -199,8 +260,18 @@ func _process(delta: float) -> void:
 		npc_timer = 0
 		_spawn_random_npc()
 
+var previous_time_left: float = 300.0
 
-
+func _check_voice_triggers():
+	for trigger_time in voice_schedule.keys():
+		var voice_node = voice_schedule[trigger_time]
+		if voice_node and not played_voices.has(trigger_time):
+			if time_left >= trigger_time - 0.5 and time_left < trigger_time:
+				print("🎤 Playing voice for time:", trigger_time)
+				voice_node.play()
+				played_voices.append(trigger_time)
+				
+				
 # ---------------- Update Labels -----------------
 func _update_labels() -> void:
 	# เรียงตามชื่อพืชทั้งหมด
@@ -338,12 +409,12 @@ func _on_grow_plant_pressed() -> void:
 
 	var new_scale = current_plant.scale * 2
 	var tween = create_tween()
-	tween.tween_property(current_plant, "scale", new_scale, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	tween.tween_property(current_plant, "scale", new_scale, 0.2).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 	
 	if grow_count >= 5 and current_plant:
 		is_harvesting = true
 		var fade_tween = create_tween()
-		fade_tween.tween_property(current_plant, "scale", Vector3.ZERO, 0.5)
+		fade_tween.tween_property(current_plant, "scale", Vector3.ZERO, 0.1)
 		await fade_tween.finished
 		
 		if current_plant and current_plant.is_inside_tree():
@@ -618,3 +689,11 @@ func _game_over(state: String) -> void:
 
 func _on_real_escape_pressed() -> void:
 	_game_over("YOU SURVIVE")
+
+
+var shake_amount := 0.0
+var shake_timer := 0.0
+
+func _shake_camera(duration: float = 0.5, intensity: float = 0.1) -> void:
+	shake_amount = intensity
+	shake_timer = duration

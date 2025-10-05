@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://4fmsep4pjml7"]
+[gd_scene load_steps=12 format=3 uid="uid://4fmsep4pjml7"]
 
 [ext_resource type="Script" uid="uid://bwnjhpbj1xe77" path="res://end_game.gd" id="1_sjse8"]
 [ext_resource type="FontFile" uid="uid://4l8t2v3w1kgt" path="res://paaymaay_regular.ttf" id="2_semjh"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://6a3e7r107p35" path="res://Assest/Screen/Radio.glb" id="5_jppxx"]
 [ext_resource type="PackedScene" uid="uid://blv5rx3mbwubc" path="res://Assest/Screen/Big Barn.glb" id="6_h3nuw"]
 [ext_resource type="PackedScene" uid="uid://dpvq0mrpxjmtm" path="res://Assest/Screen/Road.glb" id="7_jppxx"]
+[ext_resource type="AudioStream" uid="uid://btwabg3p2fsgx" path="res://Assest/SFX/End.mp3" id="8_jppxx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2goxq"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -56,6 +57,15 @@ theme_override_font_sizes/normal_font_size = 50
 text = "asdasdas"
 horizontal_alignment = 1
 
+[node name="Retry" type="Button" parent="CanvasLayer"]
+offset_left = 129.0
+offset_top = 625.0
+offset_right = 596.0
+offset_bottom = 846.0
+theme_override_fonts/font = ExtResource("2_semjh")
+theme_override_font_sizes/font_size = 80
+text = "Retry"
+
 [node name="Camera3D" type="Camera3D" parent="."]
 
 [node name="Grass Tile" parent="." instance=ExtResource("3_4amj7")]
@@ -75,3 +85,8 @@ transform = Transform3D(-0.0195647, 0.0972872, -0.012346, -0.0944183, -0.0152845
 
 [node name="Road2" parent="." instance=ExtResource("7_jppxx")]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.432927, -0.901838, -1.17431)
+
+[node name="End" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_jppxx")
+
+[connection signal="pressed" from="CanvasLayer/Retry" to="." method="_on_retry_pressed"]

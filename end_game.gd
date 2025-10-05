@@ -21,7 +21,12 @@ func set_data(state: String, harvested: Dictionary, score: int) -> void:
 func _ready() -> void:
 	if data_ready:
 		_update_ui()
-
+	var end_music = $End
+	if end_music and end_music.stream:
+		end_music.stream.loop = true   # ✅ ตั้งให้ loop
+		end_music.play()               # ✅ สั่งเล่น
+	else:
+		print("⚠️ Menu music node or stream not found!")
 func _update_ui() -> void:
 	if not end_state or not score_state:
 		push_error("Endstate หรือ Scorestate หาไม่เจอใน scene")
@@ -34,3 +39,8 @@ func _update_ui() -> void:
 		if pending_harvested[plant] > 0:
 			result_text += "- %s : %d\n" % [plant, pending_harvested[plant]]
 	score_state.text = result_text
+
+
+func _on_retry_pressed() -> void:
+	var new_scene = preload("res://Main.tscn")  # โหลด scene เป็น PackedScene
+	get_tree().change_scene_to_packed(new_scene)

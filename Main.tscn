@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bdpusdcqolj4k"]
+[gd_scene load_steps=41 format=3 uid="uid://bdpusdcqolj4k"]
 
 [ext_resource type="PackedScene" uid="uid://b3aeowc7ip7ew" path="res://Assest/Screen/Grass Tile.glb" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://c4w21wcn5yqui" path="res://main.gd" id="1_trn2v"]
@@ -23,6 +23,17 @@
 [ext_resource type="AudioStream" uid="uid://iiafk6ab5jve" path="res://Assest/SFX/kaiju-growl-368657.mp3" id="20_2gh4u"]
 [ext_resource type="AudioStream" uid="uid://fhm13jg6ihqo" path="res://Assest/SFX/Slow Clock.mp3" id="21_3b0ty"]
 [ext_resource type="AudioStream" uid="uid://kyiiir0okkjb" path="res://Assest/SFX/Fast Clock.mp3" id="22_bg4s2"]
+[ext_resource type="AudioStream" uid="uid://duu2qstsqcoq7" path="res://Assest/SFX/Intro 300.mp3" id="24_oye8v"]
+[ext_resource type="AudioStream" uid="uid://cx0tq524g5drj" path="res://Assest/Screen/fire-truck-siren-29900.mp3" id="24_sph85"]
+[ext_resource type="AudioStream" uid="uid://eu7lhigl5cbx" path="res://Assest/SFX/News 265.mp3" id="25_40n85"]
+[ext_resource type="AudioStream" uid="uid://1ybtpgn8t0xs" path="res://Assest/SFX/mixkit-masive-explosion-in-battle-2777.wav" id="25_o7g6l"]
+[ext_resource type="AudioStream" uid="uid://c7synaoh0pthj" path="res://Assest/SFX/News 254.mp3" id="26_gb15f"]
+[ext_resource type="AudioStream" uid="uid://pfq727t7w41c" path="res://Assest/SFX/News 200.mp3" id="27_sph85"]
+[ext_resource type="AudioStream" uid="uid://bpwykk34cdq3k" path="res://Assest/SFX/News 180.mp3" id="28_o7g6l"]
+[ext_resource type="AudioStream" uid="uid://cg3yif3ichx01" path="res://Assest/SFX/News 160.mp3" id="29_vi5kq"]
+[ext_resource type="AudioStream" uid="uid://copd572b13px2" path="res://Assest/SFX/Endgame 120.mp3" id="30_5mkgo"]
+[ext_resource type="AudioStream" uid="uid://t71wu20hs4d" path="res://Assest/SFX/Endgame 60.mp3" id="31_3ccbu"]
+[ext_resource type="PackedScene" uid="uid://b6fs24734amhq" path="res://Assest/Screen/Missile.glb" id="34_vi5kq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_glv2v"]
 sky_top_color = Color(0.502366, 0.669596, 0.64412, 1)
@@ -40,6 +51,235 @@ tonemap_mode = 2
 glow_enabled = true
 glow_strength = 1.09
 glow_blend_mode = 1
+
+[sub_resource type="Animation" id="Animation_5mkgo"]
+resource_name = "Endgame"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SFX/End:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Menu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("kaijyu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CameraPosition/Camera3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.585548, 0), Vector3(0, 0.585548, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CameraPosition/Camera3D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -3.10669, 0), Vector3(0.588694, -3.09962, 0.0233175)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Missile:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 9.53333),
+"transitions": PackedFloat32Array(10.9283, 1),
+"update": 0,
+"values": [Vector3(-0.572, 149.464, 102.133), Vector3(-0.572354, 7.69872, 6.93549)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Missile:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 9.56667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.70007, 0.383569, -2.83678), Vector3(0.70007, 0.383569, -2.83678)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SFX/End2:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 9.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("IntroBlacksceen:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 9.51),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_3ccbu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SFX/End:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Menu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("kaijyu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CameraPosition/Camera3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.585548, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CameraPosition/Camera3D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -3.10669, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Missile:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(19.1721, 149.464, 102.133)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Missile:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.70007, 0.383569, -2.83678)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SFX/End2:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("IntroBlacksceen:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ny7u2"]
+_data = {
+&"Endgame": SubResource("Animation_5mkgo"),
+&"RESET": SubResource("Animation_3ccbu")
+}
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_trn2v")
@@ -309,7 +549,7 @@ volume_db = -9.494
 
 [node name="Kaiju" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("20_2gh4u")
-volume_db = -9.494
+volume_db = -16.99
 
 [node name="SlowClock" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("21_3b0ty")
@@ -318,6 +558,64 @@ volume_db = -18.0
 [node name="FastClock" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("22_bg4s2")
 volume_db = -18.0
+
+[node name="End" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("24_sph85")
+volume_db = -25.06
+
+[node name="End2" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("25_o7g6l")
+volume_db = -11.277
+
+[node name="Voice" type="Node" parent="."]
+
+[node name="Intro300" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("24_oye8v")
+volume_db = -12.0
+
+[node name="News265" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("25_40n85")
+volume_db = -12.0
+
+[node name="News254" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("26_gb15f")
+volume_db = -12.0
+
+[node name="News200" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("27_sph85")
+volume_db = -12.0
+
+[node name="News180" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("28_o7g6l")
+volume_db = -12.0
+
+[node name="News160" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("29_vi5kq")
+volume_db = -12.0
+
+[node name="Endgame120" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("30_5mkgo")
+volume_db = -12.0
+
+[node name="Endgame60" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("31_3ccbu")
+volume_db = -12.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ny7u2")
+}
+
+[node name="Missile" parent="." instance=ExtResource("34_vi5kq")]
+transform = Transform3D(-2.87084, 0.144949, 0.858636, -0.688586, -2.18863, -1.93281, 0.533024, -2.04668, 2.12767, 19.1721, 149.464, 102.133)
+
+[node name="IntroBlacksceen" type="ColorRect" parent="."]
+visible = false
+offset_left = -38.0
+offset_top = -56.0
+offset_right = 759.0
+offset_bottom = 1026.0
+color = Color(0, 0, 0, 1)
 
 [connection signal="pressed" from="Menu/Escape" to="." method="_on_escape_pressed"]
 [connection signal="pressed" from="Menu/Farm" to="." method="_on_farm_pressed"]
