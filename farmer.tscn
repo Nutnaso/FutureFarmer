@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://isf1kvlqmysh"]
+
+[ext_resource type="PackedScene" uid="uid://dgclhj6isfvyh" path="res://Assest/Person/Farmer.glb" id="1_u8akl"]
+
+[node name="Farmer" type="Node3D"]
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Root Scene" parent="Pivot" instance=ExtResource("1_u8akl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0844412, 0, -0.0711112)
