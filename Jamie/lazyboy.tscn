@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cflrqx75nmrbj"]
+
+[ext_resource type="PackedScene" uid="uid://b70c53hh1upy" path="res://Assest/Person/Beach Character.glb" id="1_hti10"]
+[ext_resource type="Script" uid="uid://c3cj7dp15n5mf" path="res://Jamie/lazyboy.gd" id="1_qyky3"]
+
+[node name="lazyBoy" type="Node3D"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+script = ExtResource("1_qyky3")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Root Scene" parent="Pivot" instance=ExtResource("1_hti10")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5awsx01qsswo"]
+
+[ext_resource type="PackedScene" uid="uid://ch8ievnmy5aco" path="res://Assest/Person/Man in Suit.glb" id="1_6dqmi"]
+[ext_resource type="Script" uid="uid://cj0aaiqq72s1g" path="res://Jamie/back_3.gd" id="1_krvri"]
+
+[node name="back_3" type="Node3D"]
+script = ExtResource("1_krvri")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Root Scene" parent="Pivot" instance=ExtResource("1_6dqmi")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://eu7lhigl5cbx"
+path="res://.godot/imported/News 265.mp3-ecf5e41c4f4677df632d6e391103e7ca.mp3str"
+
+[deps]
+
+source_file="res://Assest/SFX/News 265.mp3"
+dest_files=["res://.godot/imported/News 265.mp3-ecf5e41c4f4677df632d6e391103e7ca.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

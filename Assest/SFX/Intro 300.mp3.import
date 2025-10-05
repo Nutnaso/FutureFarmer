@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://duu2qstsqcoq7"
+path="res://.godot/imported/Intro 300.mp3-b23496b42e4a5fe35ba97a46b767f7a2.mp3str"
+
+[deps]
+
+source_file="res://Assest/SFX/Intro 300.mp3"
+dest_files=["res://.godot/imported/Intro 300.mp3-b23496b42e4a5fe35ba97a46b767f7a2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://u7tqmw7pjl14"]
+
+[ext_resource type="Script" uid="uid://d13gja8kyvi2o" path="res://Jamie/richman.gd" id="1_2i70q"]
+[ext_resource type="PackedScene" uid="uid://cqayqwvja5rpb" path="res://Assest/Person/Business Man.glb" id="1_w3nad"]
+
+[node name="richman" type="Node3D"]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+script = ExtResource("1_2i70q")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Root Scene" parent="Pivot" instance=ExtResource("1_w3nad")]

@@ -1,0 +1,629 @@
+[gd_scene load_steps=41 format=3 uid="uid://bdpusdcqolj4k"]
+
+[ext_resource type="PackedScene" uid="uid://b3aeowc7ip7ew" path="res://Assest/Screen/Grass Tile.glb" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://c4w21wcn5yqui" path="res://main.gd" id="1_trn2v"]
+[ext_resource type="PackedScene" uid="uid://blv5rx3mbwubc" path="res://Assest/Screen/Big Barn.glb" id="2_r0du0"]
+[ext_resource type="PackedScene" uid="uid://bo385xlv7lwvr" path="res://Assest/Screen/Flower Bed.glb" id="3_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://wak0qwl2nxmp" path="res://Assest/Screen/Tree.glb" id="4_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://bnc0vpliuk2ng" path="res://Assest/Screen/Rock.glb" id="5_lgr22"]
+[ext_resource type="PackedScene" uid="uid://dpvq0mrpxjmtm" path="res://Assest/Screen/Road.glb" id="6_3dxm6"]
+[ext_resource type="PackedScene" uid="uid://dkw4tvu7j6pfe" path="res://Assest/Screen/Airplane.glb" id="7_lgr22"]
+[ext_resource type="PackedScene" uid="uid://bsy321x5ilav3" path="res://Assest/Screen/Cart.glb" id="9_20pc6"]
+[ext_resource type="PackedScene" uid="uid://cfl3owr2otcw2" path="res://Assest/Screen/Crate.glb" id="10_5vvyt"]
+[ext_resource type="PackedScene" uid="uid://1i8fsfbvpbnl" path="res://Assest/Screen/Market Stalls.glb" id="11_c6i3y"]
+[ext_resource type="PackedScene" uid="uid://ei6jyi53df48" path="res://Assest/Screen/Truck (1).glb" id="12_c6i3y"]
+[ext_resource type="PackedScene" uid="uid://cc6qg513loacg" path="res://Assest/Screen/Jet.glb" id="13_c2ibq"]
+[ext_resource type="PackedScene" uid="uid://bwvq0i8rwrj5v" path="res://Assest/Screen/Table.glb" id="13_sc1dx"]
+[ext_resource type="PackedScene" uid="uid://ck88py3mlqab6" path="res://Assest/Screen/Tree Trunk.glb" id="14_j4qnp"]
+[ext_resource type="PackedScene" uid="uid://6a3e7r107p35" path="res://Assest/Screen/Radio.glb" id="15_fpfj3"]
+[ext_resource type="FontFile" uid="uid://4l8t2v3w1kgt" path="res://paaymaay_regular.ttf" id="16_bg4s2"]
+[ext_resource type="PackedScene" uid="uid://cmp6kgbfarh3q" path="res://Assest/Screen/kaijyu.glb" id="16_fpfj3"]
+[ext_resource type="AudioStream" uid="uid://bm0joqvkjsgdd" path="res://Assest/SFX/fighter-jet-overhead-355468.mp3" id="18_kjvhd"]
+[ext_resource type="AudioStream" uid="uid://5t2jat85wmfy" path="res://Assest/SFX/Intro.mp3" id="19_5tuhn"]
+[ext_resource type="AudioStream" uid="uid://iiafk6ab5jve" path="res://Assest/SFX/kaiju-growl-368657.mp3" id="20_2gh4u"]
+[ext_resource type="AudioStream" uid="uid://fhm13jg6ihqo" path="res://Assest/SFX/Slow Clock.mp3" id="21_3b0ty"]
+[ext_resource type="AudioStream" uid="uid://kyiiir0okkjb" path="res://Assest/SFX/Fast Clock.mp3" id="22_bg4s2"]
+[ext_resource type="AudioStream" uid="uid://duu2qstsqcoq7" path="res://Assest/SFX/Intro 300.mp3" id="24_oye8v"]
+[ext_resource type="AudioStream" uid="uid://cx0tq524g5drj" path="res://Assest/Screen/fire-truck-siren-29900.mp3" id="24_sph85"]
+[ext_resource type="AudioStream" uid="uid://eu7lhigl5cbx" path="res://Assest/SFX/News 265.mp3" id="25_40n85"]
+[ext_resource type="AudioStream" uid="uid://1ybtpgn8t0xs" path="res://Assest/SFX/mixkit-masive-explosion-in-battle-2777.wav" id="25_o7g6l"]
+[ext_resource type="AudioStream" uid="uid://c7synaoh0pthj" path="res://Assest/SFX/News 254.mp3" id="26_gb15f"]
+[ext_resource type="AudioStream" uid="uid://pfq727t7w41c" path="res://Assest/SFX/News 200.mp3" id="27_sph85"]
+[ext_resource type="AudioStream" uid="uid://bpwykk34cdq3k" path="res://Assest/SFX/News 180.mp3" id="28_o7g6l"]
+[ext_resource type="AudioStream" uid="uid://cg3yif3ichx01" path="res://Assest/SFX/News 160.mp3" id="29_vi5kq"]
+[ext_resource type="AudioStream" uid="uid://copd572b13px2" path="res://Assest/SFX/Endgame 120.mp3" id="30_5mkgo"]
+[ext_resource type="AudioStream" uid="uid://t71wu20hs4d" path="res://Assest/SFX/Endgame 60.mp3" id="31_3ccbu"]
+[ext_resource type="PackedScene" uid="uid://b6fs24734amhq" path="res://Assest/Screen/Missile.glb" id="34_vi5kq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_glv2v"]
+sky_top_color = Color(0.502366, 0.669596, 0.64412, 1)
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_uu6xs"]
+sky_material = SubResource("ProceduralSkyMaterial_glv2v")
+
+[sub_resource type="Environment" id="Environment_r0du0"]
+background_mode = 2
+background_energy_multiplier = 1.2
+sky = SubResource("Sky_uu6xs")
+tonemap_mode = 2
+glow_enabled = true
+glow_strength = 1.09
+glow_blend_mode = 1
+
+[sub_resource type="Animation" id="Animation_5mkgo"]
+resource_name = "Endgame"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SFX/End:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Menu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("kaijyu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CameraPosition/Camera3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.585548, 0), Vector3(0, 0.585548, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CameraPosition/Camera3D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -3.10669, 0), Vector3(0.588694, -3.09962, 0.0233175)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Missile:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 9.53333),
+"transitions": PackedFloat32Array(10.9283, 1),
+"update": 0,
+"values": [Vector3(-0.572, 149.464, 102.133), Vector3(-0.572354, 7.69872, 6.93549)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Missile:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 9.56667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.70007, 0.383569, -2.83678), Vector3(0.70007, 0.383569, -2.83678)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SFX/End2:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 9.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("IntroBlacksceen:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 9.51),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_3ccbu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SFX/End:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Menu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("kaijyu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CameraPosition/Camera3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.585548, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CameraPosition/Camera3D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -3.10669, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Missile:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(19.1721, 149.464, 102.133)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Missile:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.70007, 0.383569, -2.83678)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SFX/End2:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("IntroBlacksceen:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ny7u2"]
+_data = {
+&"Endgame": SubResource("Animation_5mkgo"),
+&"RESET": SubResource("Animation_3ccbu")
+}
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_trn2v")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.225439, 0.446293, 0.150761, 0.733309, 0.66297, -0.47673, 0.641432, -0.601077, 0, 0, 0)
+light_energy = 0.2
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_r0du0")
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="Floor" type="Node3D" parent="Map"]
+
+[node name="Grass Tile" parent="Map/Floor" instance=ExtResource("1_glv2v")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -0.0105285, -2.83676, -0.0260442)
+metadata/_edit_lock_ = true
+
+[node name="Root Scene" parent="Map/Floor" instance=ExtResource("3_cm0pq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.185529, 0, 4.34668)
+
+[node name="Big Barn" parent="Map/Floor" instance=ExtResource("2_r0du0")]
+transform = Transform3D(-0.959092, 0, -0.283095, 0, 1, 0, 0.283095, 0, -0.959092, 4.01743, -0.857919, 14.4311)
+
+[node name="Tree" parent="Map/Floor" instance=ExtResource("4_cm0pq")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -3.08355, -1.45711, 13.8952)
+
+[node name="Rock" parent="Map/Floor" instance=ExtResource("5_lgr22")]
+transform = Transform3D(-0.873339, 0, -0.487113, 0, 1, 0, 0.487113, 0, -0.873339, -1.57094, 0.302047, 13.0575)
+
+[node name="Tree2" parent="Map/Floor" instance=ExtResource("4_cm0pq")]
+transform = Transform3D(-0.0193285, 0, -0.00513895, 0, 0.02, 0, 0.00513895, 0, -0.0193285, 9.3059, -1.45711, 0.485572)
+
+[node name="Rock2" parent="Map/Floor" instance=ExtResource("5_lgr22")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -3.62228, 0, -9.16127)
+
+[node name="Rock3" parent="Map/Floor" instance=ExtResource("5_lgr22")]
+transform = Transform3D(4.13359, 0, -9.10568, 0, 10, 0, 9.10568, 0, 4.13359, 8.43556, 0, -10.2198)
+
+[node name="Shop" type="Node3D" parent="Map"]
+
+[node name="Road2" parent="Map" instance=ExtResource("6_3dxm6")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, -12.1818, -1.43266, -0.549031)
+
+[node name="Airplane" parent="Map" instance=ExtResource("7_lgr22")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -12.9276, 2.14659, 0.86247)
+
+[node name="Root Scene" parent="Map" instance=ExtResource("9_20pc6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.966828, 0, 0.023828)
+
+[node name="Root Scene2" parent="Map" instance=ExtResource("10_5vvyt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22642, 0, 1.47426)
+
+[node name="Root Scene3" parent="Map" instance=ExtResource("11_c6i3y")]
+transform = Transform3D(-1.99472, 0, 0.145223, 0, 2, 0, -0.145223, 0, -1.99472, 2.82527, -0.139185, -0.612489)
+
+[node name="Truck" parent="Map" instance=ExtResource("12_c6i3y")]
+transform = Transform3D(-4.66414, 0.248741, -1.78434, 0.299966, 4.99021, -0.0884441, 1.77645, -0.189552, -4.66994, -0.0282915, 0.227707, -2.16649)
+
+[node name="Tree Trunk" parent="Map" instance=ExtResource("14_j4qnp")]
+transform = Transform3D(0.655031, 0, -0.755602, 0, 1, 0, 0.755602, 0, 0.655031, -2.10085, 0, 4.71756)
+
+[node name="Root Scene4" parent="Map" instance=ExtResource("15_fpfj3")]
+transform = Transform3D(-0.24889, 0, 0.167493, 0, 0.3, 0, -0.167493, 0, -0.24889, -2.03457, 0.264263, 4.61681)
+
+[node name="Root Scene5" parent="Map" instance=ExtResource("13_sc1dx")]
+transform = Transform3D(-0.0299835, 0.125988, 0.482937, -0.00189845, 0.483775, -0.126324, -0.499097, -0.00940895, -0.0285321, -1.0185, 0.237041, 0.0418916)
+
+[node name="CameraPosition" type="Marker3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CameraPosition"]
+transform = Transform3D(-0.999391, 0, -0.0348995, 0, 1, 0, 0.0348995, 0, -0.999391, 0, 0.585548, 0)
+
+[node name="Menu" type="CanvasLayer" parent="."]
+
+[node name="Escape" type="Button" parent="Menu"]
+visible = false
+modulate = Color(0.999999, 0.152423, 0.0974169, 1)
+offset_left = 242.0
+offset_top = 764.0
+offset_right = 488.0
+offset_bottom = 836.0
+text = "Escape"
+
+[node name="Farm" type="Button" parent="Menu"]
+offset_left = 258.0
+offset_top = 859.0
+offset_right = 476.0
+offset_bottom = 921.0
+text = "Farm"
+
+[node name="Shop" type="Button" parent="Menu"]
+offset_left = 20.0
+offset_top = 860.0
+offset_right = 189.0
+offset_bottom = 922.0
+text = "Shop"
+
+[node name="Station" type="Button" parent="Menu"]
+offset_left = 546.0
+offset_top = 861.0
+offset_right = 709.0
+offset_bottom = 923.0
+text = "Station"
+
+[node name="FarmMenu" type="CanvasLayer" parent="Menu"]
+visible = false
+
+[node name="GrowPlant" type="Button" parent="Menu/FarmMenu"]
+modulate = Color(0.572549, 1, 0.47451, 1)
+self_modulate = Color(1, 1, 1, 0.509804)
+offset_left = 128.0
+offset_top = 162.0
+offset_right = 572.0
+offset_bottom = 711.0
+theme_override_font_sizes/font_size = 30
+text = "Press here For Glow a plant"
+
+[node name="OptionButton" type="OptionButton" parent="Menu/FarmMenu"]
+offset_left = 128.0
+offset_top = 73.0
+offset_right = 568.0
+offset_bottom = 144.0
+selected = 0
+item_count = 1
+popup/item_0/text = "Non Select"
+popup/item_0/id = 0
+
+[node name="ShopMenu" type="CanvasLayer" parent="Menu"]
+visible = false
+
+[node name="BuyButton" type="Button" parent="Menu/ShopMenu"]
+modulate = Color(0.571769, 1, 0.47365, 0.141176)
+offset_left = 128.0
+offset_top = 568.0
+offset_right = 572.0
+offset_bottom = 711.0
+theme_override_font_sizes/font_size = 80
+text = "BUY"
+
+[node name="ShopOptionButton" type="OptionButton" parent="Menu/ShopMenu"]
+offset_left = 159.0
+offset_top = 73.0
+offset_right = 546.0
+offset_bottom = 144.0
+selected = 0
+item_count = 1
+popup/item_0/text = "Non Select"
+popup/item_0/id = 0
+
+[node name="StationMenu" type="CanvasLayer" parent="Menu"]
+visible = false
+
+[node name="SellButton" type="Button" parent="Menu/StationMenu"]
+modulate = Color(0.571769, 1, 0.47365, 0.141176)
+offset_left = 128.0
+offset_top = 568.0
+offset_right = 572.0
+offset_bottom = 711.0
+theme_override_font_sizes/font_size = 80
+text = "Sell"
+
+[node name="QuestLabel" type="RichTextLabel" parent="Menu/StationMenu"]
+self_modulate = Color(0.577008, 0.577008, 0.577008, 1)
+offset_left = 199.0
+offset_top = 103.0
+offset_right = 519.0
+offset_bottom = 359.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("16_bg4s2")
+theme_override_font_sizes/normal_font_size = 30
+
+[node name="ColorRect" type="ColorRect" parent="Menu/StationMenu/QuestLabel"]
+layout_mode = 0
+offset_left = -90.0
+offset_right = 429.0
+offset_bottom = 195.0
+color = Color(0.662745, 0.537255, 0.835294, 0.243137)
+
+[node name="Score" type="Label" parent="Menu"]
+offset_left = 23.0
+offset_top = 754.0
+offset_right = 127.0
+offset_bottom = 829.0
+theme_override_font_sizes/font_size = 30
+text = "score"
+
+[node name="Time" type="Label" parent="Menu"]
+offset_left = 255.0
+offset_top = 32.0
+offset_right = 424.0
+offset_bottom = 90.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_bg4s2")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[node name="CurrentSeed" type="Label" parent="Menu"]
+offset_left = 13.0
+offset_top = 114.0
+offset_right = 114.0
+offset_bottom = 794.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_bg4s2")
+theme_override_font_sizes/font_size = 25
+
+[node name="ColorRect" type="ColorRect" parent="Menu/CurrentSeed"]
+layout_mode = 0
+offset_right = 109.0
+offset_bottom = 312.0
+color = Color(1, 0.694118, 0.443137, 0.117647)
+
+[node name="Harvested" type="Label" parent="Menu"]
+offset_left = 593.0
+offset_top = 97.0
+offset_right = 705.0
+offset_bottom = 777.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_bg4s2")
+theme_override_font_sizes/font_size = 25
+
+[node name="ColorRect" type="ColorRect" parent="Menu/Harvested"]
+layout_mode = 0
+offset_right = 125.0
+offset_bottom = 349.0
+color = Color(0.0117647, 0.368627, 0, 0.0588235)
+
+[node name="IntroBlacksceen" type="ColorRect" parent="Menu"]
+visible = false
+offset_left = -38.0
+offset_top = -56.0
+offset_right = 759.0
+offset_bottom = 1026.0
+color = Color(0, 0, 0, 1)
+
+[node name="RealEscape" type="Button" parent="Menu"]
+visible = false
+modulate = Color(0.999999, 0.152423, 0.0974169, 1)
+offset_left = 135.0
+offset_top = 178.0
+offset_right = 558.0
+offset_bottom = 675.0
+theme_override_font_sizes/font_size = 80
+text = "Confirm 
+Escape"
+
+[node name="kaijyu" parent="." instance=ExtResource("16_fpfj3")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -0.0345001, 6.03012, 29.0857)
+visible = false
+
+[node name="Jet" parent="." instance=ExtResource("13_c2ibq")]
+visible = false
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Jet" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("18_kjvhd")
+volume_db = -9.494
+pitch_scale = 0.57
+
+[node name="Intro" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("19_5tuhn")
+volume_db = -9.494
+
+[node name="Kaiju" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("20_2gh4u")
+volume_db = -16.99
+
+[node name="SlowClock" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("21_3b0ty")
+volume_db = -18.0
+
+[node name="FastClock" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("22_bg4s2")
+volume_db = -18.0
+
+[node name="End" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("24_sph85")
+volume_db = -25.06
+
+[node name="End2" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("25_o7g6l")
+volume_db = -11.277
+
+[node name="Voice" type="Node" parent="."]
+
+[node name="Intro300" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("24_oye8v")
+volume_db = -12.0
+
+[node name="News265" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("25_40n85")
+volume_db = -12.0
+
+[node name="News254" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("26_gb15f")
+volume_db = -12.0
+
+[node name="News200" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("27_sph85")
+volume_db = -12.0
+
+[node name="News180" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("28_o7g6l")
+volume_db = -12.0
+
+[node name="News160" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("29_vi5kq")
+volume_db = -12.0
+
+[node name="Endgame120" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("30_5mkgo")
+volume_db = -12.0
+
+[node name="Endgame60" type="AudioStreamPlayer" parent="Voice"]
+stream = ExtResource("31_3ccbu")
+volume_db = -12.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ny7u2")
+}
+
+[node name="Missile" parent="." instance=ExtResource("34_vi5kq")]
+transform = Transform3D(-2.87084, 0.144949, 0.858636, -0.688586, -2.18863, -1.93281, 0.533024, -2.04668, 2.12767, 19.1721, 149.464, 102.133)
+
+[node name="IntroBlacksceen" type="ColorRect" parent="."]
+visible = false
+offset_left = -38.0
+offset_top = -56.0
+offset_right = 759.0
+offset_bottom = 1026.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="Menu/Escape" to="." method="_on_escape_pressed"]
+[connection signal="pressed" from="Menu/Farm" to="." method="_on_farm_pressed"]
+[connection signal="pressed" from="Menu/Shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="Menu/Station" to="." method="_on_station_pressed"]
+[connection signal="pressed" from="Menu/FarmMenu/GrowPlant" to="." method="_on_grow_plant_pressed"]
+[connection signal="item_selected" from="Menu/FarmMenu/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="Menu/ShopMenu/BuyButton" to="." method="_on_buy_button_pressed"]
+[connection signal="item_selected" from="Menu/ShopMenu/ShopOptionButton" to="." method="_on_shop_option_button_item_selected"]
+[connection signal="pressed" from="Menu/StationMenu/SellButton" to="." method="_on_sell_button_pressed"]
+[connection signal="pressed" from="Menu/RealEscape" to="." method="_on_real_escape_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cg3yif3ichx01"
+path="res://.godot/imported/News 160.mp3-38f30f48d2a0021b1359686196655c41.mp3str"
+
+[deps]
+
+source_file="res://Assest/SFX/News 160.mp3"
+dest_files=["res://.godot/imported/News 160.mp3-38f30f48d2a0021b1359686196655c41.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

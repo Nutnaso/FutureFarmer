@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="FutureFarmer"
+run/main_scene="uid://ctxfdw6wql8ne"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=980
+window/stretch/mode="viewport"
 
 [filesystem]
 

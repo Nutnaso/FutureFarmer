@@ -1,0 +1,92 @@
+[gd_scene load_steps=12 format=3 uid="uid://4fmsep4pjml7"]
+
+[ext_resource type="Script" uid="uid://bwnjhpbj1xe77" path="res://end_game.gd" id="1_sjse8"]
+[ext_resource type="FontFile" uid="uid://4l8t2v3w1kgt" path="res://paaymaay_regular.ttf" id="2_semjh"]
+[ext_resource type="PackedScene" uid="uid://b3aeowc7ip7ew" path="res://Assest/Screen/Grass Tile.glb" id="3_4amj7"]
+[ext_resource type="PackedScene" uid="uid://ck88py3mlqab6" path="res://Assest/Screen/Tree Trunk.glb" id="4_h3nuw"]
+[ext_resource type="PackedScene" uid="uid://6a3e7r107p35" path="res://Assest/Screen/Radio.glb" id="5_jppxx"]
+[ext_resource type="PackedScene" uid="uid://blv5rx3mbwubc" path="res://Assest/Screen/Big Barn.glb" id="6_h3nuw"]
+[ext_resource type="PackedScene" uid="uid://dpvq0mrpxjmtm" path="res://Assest/Screen/Road.glb" id="7_jppxx"]
+[ext_resource type="AudioStream" uid="uid://btwabg3p2fsgx" path="res://Assest/SFX/End.mp3" id="8_jppxx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2goxq"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_5mt7g"]
+sky_material = SubResource("ProceduralSkyMaterial_2goxq")
+
+[sub_resource type="Environment" id="Environment_mao43"]
+background_mode = 2
+sky = SubResource("Sky_5mt7g")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="EndGame" type="Node3D"]
+script = ExtResource("1_sjse8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.22544, 0.446296, 0, 0.892586, 0.450877, -0.500003, 0.39047, -0.773, 0, 0, 0)
+light_energy = 2.2
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mao43")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Endstate" type="Label" parent="CanvasLayer"]
+offset_left = 49.0
+offset_top = 34.0
+offset_right = 633.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.76662, 0.76662, 0.76662, 1)
+theme_override_fonts/font = ExtResource("2_semjh")
+theme_override_font_sizes/font_size = 120
+text = "asdasdas"
+horizontal_alignment = 1
+
+[node name="Scorestate" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 94.0
+offset_top = 154.0
+offset_right = 598.0
+offset_bottom = 839.0
+theme_override_fonts/normal_font = ExtResource("2_semjh")
+theme_override_font_sizes/normal_font_size = 50
+text = "asdasdas"
+horizontal_alignment = 1
+
+[node name="Retry" type="Button" parent="CanvasLayer"]
+offset_left = 129.0
+offset_top = 625.0
+offset_right = 596.0
+offset_bottom = 846.0
+theme_override_fonts/font = ExtResource("2_semjh")
+theme_override_font_sizes/font_size = 80
+text = "Retry"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="Grass Tile" parent="." instance=ExtResource("3_4amj7")]
+transform = Transform3D(1, 0, 0, 0, 0.125731, -0.992064, 0, 0.992064, 0.125731, -0.00160682, -0.457964, -1.63786)
+
+[node name="Grass Tile2" parent="." instance=ExtResource("3_4amj7")]
+transform = Transform3D(1, 0, 0, 0, -0.323158, -0.946345, 0, 0.946345, -0.323158, -0.00321364, 1.10932, -1.53313)
+
+[node name="Tree Trunk" parent="." instance=ExtResource("4_h3nuw")]
+transform = Transform3D(0.198371, 0.513656, -0.83475, -0.979964, 0.0884333, -0.178463, -0.017849, 0.853427, 0.520907, -0.791262, 0.202853, -1.38802)
+
+[node name="Root Scene" parent="." instance=ExtResource("5_jppxx")]
+transform = Transform3D(0.119039, 0.0973037, -0.127913, -0.0662889, 0.174734, 0.0712305, 0.146409, 2.69931e-09, 0.136252, 0.716362, 0.0416752, -1.7101)
+
+[node name="Big Barn" parent="." instance=ExtResource("6_h3nuw")]
+transform = Transform3D(-0.0195647, 0.0972872, -0.012346, -0.0944183, -0.0152845, 0.0291816, 0.0265029, 0.0173662, 0.0948473, 0.767242, 0.681409, -2.45068)
+
+[node name="Road2" parent="." instance=ExtResource("7_jppxx")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.432927, -0.901838, -1.17431)
+
+[node name="End" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_jppxx")
+
+[connection signal="pressed" from="CanvasLayer/Retry" to="." method="_on_retry_pressed"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cevst2cmudyyv"]
+
+[ext_resource type="PackedScene" uid="uid://dw1juhasn0s2l" path="res://Assest/Person/Fitness Character.glb" id="1_t7ihr"]
+
+[node name="Back1" type="Node3D"]
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Root Scene" parent="Pivot" instance=ExtResource("1_t7ihr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03537, 0, 0)

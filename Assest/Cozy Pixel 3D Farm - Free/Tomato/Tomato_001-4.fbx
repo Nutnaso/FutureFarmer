@@ -1,0 +1,996 @@
+; FBX 7.3.0 project file
+; Created by the Blockbench FBX Exporter
+; ----------------------------------------------------
+; 
+
+FBXHeaderExtension:  {
+	FBXHeaderVersion: 1003
+	FBXVersion: 7300
+	EncryptionType: 0
+	CreationTimeStamp:  {
+		Version: 1000
+		Year: 2025
+		Month: 3
+		Day: 17
+		Hour: 19
+		Minute: 25
+		Second: 14
+		Millisecond: 123
+	}
+	Creator: "Blockbench 4.12.3"
+	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
+		Type: "UserData"
+		Version: 100
+		MetaData:  {
+			Version: 100
+			Title: ""
+			Subject: ""
+			Author: ""
+			Keywords: ""
+			Revision: ""
+			Comment: ""
+		}
+		Properties70:  {
+			P: "DocumentUrl", "KString", "Url", "", "C:\Users\Blockbench\foobar.fbx"
+			P: "SrcDocumentUrl", "KString", "Url", "", "C:\Users\Blockbench\foobar.fbx"
+			P: "Original", "Compound", "", ""
+			P: "Original|ApplicationVendor", "KString", "", "", "Blockbench"
+			P: "Original|ApplicationName", "KString", "", "", "Blockbench FBX Exporter"
+			P: "Original|ApplicationVersion", "KString", "", "", "4.12.3"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "01/01/1970 00:00:00.000"
+			P: "Original|FileName", "KString", "", "", "/foobar.fbx"
+			P: "LastSaved", "Compound", "", ""
+			P: "LastSaved|ApplicationVendor", "KString", "", "", "Blockbench"
+			P: "LastSaved|ApplicationName", "KString", "", "", "Blockbench FBX Exporter"
+			P: "LastSaved|ApplicationVersion", "KString", "", "", "4.12.3"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "01/01/1970 00:00:00.000"
+			P: "Original|ApplicationNativeFile", "KString", "", "", ""
+		}
+	}
+}
+FileId: "iVFoobar"
+CreationTime: "2025-03-17 22:25:14:123"
+Creator: "Made with Blockbench"
+GlobalSettings:  {
+	Version: 1000
+	Properties70:  {
+		P: "UpAxis", "int", "Integer", "",1
+		P: "UpAxisSign", "int", "Integer", "",1
+		P: "FrontAxis", "int", "Integer", "",2
+		P: "FrontAxisSign", "int", "Integer", "",1
+		P: "CoordAxis", "int", "Integer", "",0
+		P: "CoordAxisSign", "int", "Integer", "",1
+		P: "OriginalUpAxis", "int", "Integer", "",-1
+		P: "OriginalUpAxisSign", "int", "Integer", "",1
+		P: "UnitScaleFactor", "double", "Number", "",1
+		P: "OriginalUnitScaleFactor", "double", "Number", "",1
+		P: "AmbientColor", "ColorRGB", "Color", "",0,0,0
+		P: "DefaultCamera", "KString", "", "", "Producer Perspective"
+		P: "TimeMode", "enum", "", "",0
+		P: "TimeSpanStart", "KTime", "Time", "",0
+		P: "TimeSpanStop", "KTime", "Time", "",46186158000
+		P: "CustomFrameRate", "double", "Number", "",24
+	}
+}
+
+; Documents Description
+;------------------------------------------------------------------
+
+Documents:  {
+	Count: 1
+	Document: 89401099 {
+		Scene: "Scene"
+		Properties70:  {
+			P: "SourceObject", "object", "", ""
+			P: "ActiveAnimStackName", "KString", "", "", ""
+		}
+		RootNode: 0
+	}
+}
+
+; Document References
+;------------------------------------------------------------------
+
+References: 
+
+; Object definitions
+;------------------------------------------------------------------
+
+Definitions:  {
+	Version: 100
+	Count: 50
+	ObjectType: "GlobalSettings" {
+		Count: 1
+	}
+	ObjectType: "Model" {
+		Count: 4
+		PropertyTemplate: "FbxNode" {
+			Properties70:  {
+				P: "QuaternionInterpolate", "enum", "", "",0
+				P: "RotationOffset", "Vector3D", "Vector", "",0,0,0
+				P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingOffset", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingPivot", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationActive", "bool", "", "",0
+				P: "TranslationMin", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationMax", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationMinX", "bool", "", "",0
+				P: "TranslationMinY", "bool", "", "",0
+				P: "TranslationMinZ", "bool", "", "",0
+				P: "TranslationMaxX", "bool", "", "",0
+				P: "TranslationMaxY", "bool", "", "",0
+				P: "TranslationMaxZ", "bool", "", "",0
+				P: "RotationOrder", "enum", "", "",5
+				P: "RotationSpaceForLimitOnly", "bool", "", "",0
+				P: "RotationStiffnessX", "double", "Number", "",0
+				P: "RotationStiffnessY", "double", "Number", "",0
+				P: "RotationStiffnessZ", "double", "Number", "",0
+				P: "AxisLen", "double", "Number", "",10
+				P: "PreRotation", "Vector3D", "Vector", "",0,0,0
+				P: "PostRotation", "Vector3D", "Vector", "",0,0,0
+				P: "RotationActive", "bool", "", "",0
+				P: "RotationMin", "Vector3D", "Vector", "",0,0,0
+				P: "RotationMax", "Vector3D", "Vector", "",0,0,0
+				P: "RotationMinX", "bool", "", "",0
+				P: "RotationMinY", "bool", "", "",0
+				P: "RotationMinZ", "bool", "", "",0
+				P: "RotationMaxX", "bool", "", "",0
+				P: "RotationMaxY", "bool", "", "",0
+				P: "RotationMaxZ", "bool", "", "",0
+				P: "InheritType", "enum", "", "",0
+				P: "ScalingActive", "bool", "", "",0
+				P: "ScalingMin", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingMax", "Vector3D", "Vector", "",1,1,1
+				P: "ScalingMinX", "bool", "", "",0
+				P: "ScalingMinY", "bool", "", "",0
+				P: "ScalingMinZ", "bool", "", "",0
+				P: "ScalingMaxX", "bool", "", "",0
+				P: "ScalingMaxY", "bool", "", "",0
+				P: "ScalingMaxZ", "bool", "", "",0
+				P: "GeometricTranslation", "Vector3D", "Vector", "",0,0,0
+				P: "GeometricRotation", "Vector3D", "Vector", "",0,0,0
+				P: "GeometricScaling", "Vector3D", "Vector", "",1,1,1
+				P: "MinDampRangeX", "double", "Number", "",0
+				P: "MinDampRangeY", "double", "Number", "",0
+				P: "MinDampRangeZ", "double", "Number", "",0
+				P: "MaxDampRangeX", "double", "Number", "",0
+				P: "MaxDampRangeY", "double", "Number", "",0
+				P: "MaxDampRangeZ", "double", "Number", "",0
+				P: "MinDampStrengthX", "double", "Number", "",0
+				P: "MinDampStrengthY", "double", "Number", "",0
+				P: "MinDampStrengthZ", "double", "Number", "",0
+				P: "MaxDampStrengthX", "double", "Number", "",0
+				P: "MaxDampStrengthY", "double", "Number", "",0
+				P: "MaxDampStrengthZ", "double", "Number", "",0
+				P: "PreferedAngleX", "double", "Number", "",0
+				P: "PreferedAngleY", "double", "Number", "",0
+				P: "PreferedAngleZ", "double", "Number", "",0
+				P: "LookAtProperty", "object", "", ""
+				P: "UpVectorProperty", "object", "", ""
+				P: "Show", "bool", "", "",1
+				P: "NegativePercentShapeSupport", "bool", "", "",1
+				P: "DefaultAttributeIndex", "int", "Integer", "",-1
+				P: "Freeze", "bool", "", "",0
+				P: "LODBox", "bool", "", "",0
+				P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+				P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+				P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+				P: "Visibility", "Visibility", "", "A",1
+				P: "Visibility Inheritance", "Visibility Inheritance", "", "",1
+			}
+		}
+	}
+	ObjectType: "Geometry" {
+		Count: 3
+		PropertyTemplate: "FbxMesh" {
+			Properties70:  {
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "BBoxMin", "Vector3D", "Vector", "",0,0,0
+				P: "BBoxMax", "Vector3D", "Vector", "",0,0,0
+				P: "Primary Visibility", "bool", "", "",1
+				P: "Casts Shadows", "bool", "", "",1
+				P: "Receive Shadows", "bool", "", "",1
+			}
+		}
+	}
+	ObjectType: "Material" {
+		Count: 14
+		PropertyTemplate: "FbxSurfaceLambert" {
+			Properties70:  {
+				P: "ShadingModel", "KString", "", "", "Lambert"
+				P: "MultiLayer", "bool", "", "",0
+				P: "EmissiveColor", "Color", "", "A",0,0,0
+				P: "EmissiveFactor", "Number", "", "A",1
+				P: "AmbientColor", "Color", "", "A",0.2,0.2,0.2
+				P: "AmbientFactor", "Number", "", "A",1
+				P: "DiffuseColor", "Color", "", "A",0.8,0.8,0.8
+				P: "DiffuseFactor", "Number", "", "A",1
+				P: "Bump", "Vector3D", "Vector", "",0,0,0
+				P: "NormalMap", "Vector3D", "Vector", "",0,0,0
+				P: "BumpFactor", "double", "Number", "",1
+				P: "TransparentColor", "Color", "", "A",0,0,0
+				P: "TransparencyFactor", "Number", "", "A",0
+				P: "DisplacementColor", "ColorRGB", "Color", "",0,0,0
+				P: "DisplacementFactor", "double", "Number", "",1
+				P: "VectorDisplacementColor", "ColorRGB", "Color", "",0,0,0
+				P: "VectorDisplacementFactor", "double", "Number", "",1
+			}
+		}
+	}
+	ObjectType: "Texture" {
+		Count: 14
+		PropertyTemplate: "FbxFileTexture" {
+			Properties70:  {
+				P: "TextureTypeUse", "enum", "", "",0
+				P: "Texture alpha", "Number", "", "A",1
+				P: "CurrentMappingType", "enum", "", "",0
+				P: "WrapModeU", "enum", "", "",0
+				P: "WrapModeV", "enum", "", "",0
+				P: "UVSwap", "bool", "", "",0
+				P: "PremultiplyAlpha", "bool", "", "",1
+				P: "Translation", "Vector", "", "A",0,0,0
+				P: "Rotation", "Vector", "", "A",0,0,0
+				P: "Scaling", "Vector", "", "A",1,1,1
+				P: "TextureRotationPivot", "Vector3D", "Vector", "",0,0,0
+				P: "TextureScalingPivot", "Vector3D", "Vector", "",0,0,0
+				P: "CurrentTextureBlendMode", "enum", "", "",1
+				P: "UVSet", "KString", "", "", "default"
+				P: "UseMaterial", "bool", "", "",0
+				P: "UseMipMap", "bool", "", "",0
+			}
+		}
+	}
+	ObjectType: "Video" {
+		Count: 14
+		PropertyTemplate: "FbxVideo" {
+			Properties70:  {
+				P: "ImageSequence", "bool", "", "",0
+				P: "ImageSequenceOffset", "int", "Integer", "",0
+				P: "FrameRate", "double", "Number", "",0
+				P: "LastFrame", "int", "Integer", "",0
+				P: "Width", "int", "Integer", "",0
+				P: "Height", "int", "Integer", "",0
+				P: "Path", "KString", "XRefUrl", "", ""
+				P: "StartFrame", "int", "Integer", "",0
+				P: "StopFrame", "int", "Integer", "",0
+				P: "PlaySpeed", "double", "Number", "",0
+				P: "Offset", "KTime", "Time", "",0
+				P: "InterlaceMode", "enum", "", "",0
+				P: "FreeRunning", "bool", "", "",0
+				P: "Loop", "bool", "", "",0
+				P: "AccessMode", "enum", "", "",0
+			}
+		}
+	}
+}
+
+; Object properties
+;------------------------------------------------------------------
+
+Objects:  {
+	Geometry: 26830731, "Geometry::Tomato_001-4-3", "Mesh" {
+		Vertices: *108 {
+			a: -1.7339375000000001,9.3105,4.9365,7.97425,4.72525,3.4915624999999997,-6.979375,-2.0143125,5.631375,2.728875,-6.5995625,4.1864375,-3.297875,9.37725,-5.7831874999999995,6.4103125,4.792,-7.2280625,-8.543312499999999,-1.9476875,-5.088375,1.1648749999999999,-6.532937499999999,-6.53325,9.6193125,3.6123125,-2.2294375,-4.942937499999999,10.490187500000001,-0.06212499999999999,-10.188374999999999,-0.8346875,0.6327499999999999,4.373937499999999,-7.7125625,-1.5346250000000001,1.16525,7.10125,-9.185500000000001,-4.0801875,-4.223625,-8.4906875,-3.6940625,-5.9723749999999995,-0.3466875,-1.73425,-4.323625,7.5888124999999995,3.5111249999999994,7.001250000000001,6.8939375,3.125,8.75,-1.25,4.414125,-1.2180625,-7.816375,-1.6379375,1.4465000000000001,-10.075000000000001,-6.7876875000000005,4.0725625,-6.1491875,-8.685875,5.3568125,0.45199999999999996,-4.983125,3.9956875000000003,6.219625,1.0689374999999999,1.331125,8.47825,6.218624999999999,-1.295,4.5524375,8.11675,-2.5791874999999997,-2.0487499999999996,2.129125,9.995750000000001,11.5355625,7.7299375,7.3503750000000005,10.702,3.125,8.75,-1.25,10.9395,8.897375,3.9270625000000003,-0.26225,14.188124999999998,5.5943125,4.120875,7.50425,-14.035624999999998,-1.48,10.149624999999999,-13.202,3.125,8.75,-1.25,-2.0668124999999997,14.264999999999999,-6.7745625,9.135,8.974375,-8.4416875
+		}
+		PolygonVertexIndex: *110 {
+			a: 3,24,23,-16,13,19,18,-8,5,12,17,-9,11,14,13,-8,10,21,20,-7,7,18,25,-12,8,17,16,-2,2,22,21,-11,3,15,14,-12,11,25,24,-4,6,20,19,-14,6,13,14,-11,10,14,15,-3,15,23,22,-3,0,16,17,-10,9,17,12,-5,5,18,19,-13,12,19,20,-5,4,20,21,-10,9,21,22,-1,0,22,23,-17,16,23,24,-2,1,24,25,-9,8,25,18,-6,29,28,-31,27,29,30,-27,34,33,-36,32,34,35,-32
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *84 {
+				a: 0.44772055052769383,-0.35128027594401373,0.8222824796673444,0.19350502383464208,-0.3404461623747188,-0.92013706385249,0.47418489311113077,0.8313514146511707,-0.2898335945032645,-0.2339973843731265,-0.9527876693246571,-0.1934964632478414,-0.9264534754363274,0.21582081538610545,-0.3083915263071074,0.6515657097803385,-0.5294843649480665,-0.5432388361613945,0.6271954586896225,0.767076842792485,0.13497767908297764,-0.7993438090144366,0.21041716632047539,0.5628268748984481,-0.2739386717138758,-0.9259268564907638,0.26003280671632506,0.7786724173343036,-0.5348942334050629,0.3279594876699896,-0.5955007420262035,0.03221673041272259,-0.8027085078207126,-0.5387027922610046,-0.8286004324002657,-0.15238315207492434,-0.5638526128938682,-0.7697766840206666,0.29918905005181,-0.34128935660174103,0.021376743880036683,0.939715174875588,0.3384566273344697,0.9231766101941644,0.18218687604706227,0.17065654527316418,0.9554874550842545,-0.24066588194433208,0.3412918993784609,-0.021370309673423484,-0.9397143977204482,-0.44771486969774144,0.35128849548723357,-0.8222820613328798,-0.7786681985160727,0.5348935721117222,-0.3279705827254878,-0.6515583300813352,0.5294839252311242,0.5432481158949962,-0.19350666042441697,0.34044311055144766,0.9201378488299696,0.5955088229160592,-0.03220597336163973,0.8027029444999931,0.9264542576757577,-0.2158300284935506,0.3083827284964803,0.7993534414239,-0.21041300101275318,-0.5628147516621922,0.3107717692098058,0.8130934724152054,-0.4922396901693228,0.43989871711694767,0.8075857325955347,0.39280326269902205,0.4398861040963935,0.8075925521485999,0.3928033670133285,0.3107677358690215,0.8130957838788674,-0.49223841843282856
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *220 {
+				a: 0.8125,0.875,0.8125,0.90625,0.78125,0.90625,0.78125,0.875,0.78125,0.875,0.78125,0.90625,0.75,0.90625,0.75,0.875,0.78125,0.84375,0.8125,0.84375,0.78125,0.875,0.75,0.84375,0.75,0.84375,0.76825375,0.8062653125,0.804765625,0.826394375,0.7801328125,0.84375,0.78125,0.875,0.78125,0.90625,0.75,0.90625,0.75,0.875,0.8125,0.875,0.8125,0.90625,0.78125,0.90625,0.78125,0.875,0.8125,0.84375,0.78125,0.875,0.75,0.84375,0.78125,0.84375,0.8125,0.9375,0.8125,0.96875,0.78125,0.96875,0.78125,0.9375,0.78028125,0.84375,0.75,0.84375,0.76816875,0.806225,0.80450625,0.82615625,0.78125,0.875,0.78125,0.90625,0.75,0.90625,0.75,0.875,0.8125,0.875,0.8125,0.90625,0.78125,0.90625,0.78125,0.875,0.78028125,0.84375,0.75,0.84375,0.76816875,0.806225,0.80450625,0.82615625,0.75,0.84375,0.76825375,0.8062653125,0.804765625,0.826394375,0.7801328125,0.84375,0.78125,0.9375,0.78125,0.96875,0.75,0.96875,0.75,0.9375,0.78125,0.84375,0.8125,0.84375,0.78125,0.875,0.75,0.84375,0.8125,0.84375,0.78125,0.875,0.75,0.84375,0.78125,0.84375,0.75,0.9375,0.75,0.90625,0.78125,0.90625,0.78125,0.9375,0.78125,0.9375,0.78125,0.90625,0.8125,0.90625,0.8125,0.9375,0.75,0.9375,0.75,0.90625,0.78125,0.90625,0.78125,0.9375,0.78125,1,0.78125,0.96875,0.8125,0.96875,0.8125,1,0.75,1,0.75,0.96875,0.78125,0.96875,0.78125,1,0.78125,0.9375,0.78125,0.90625,0.8125,0.90625,0.8125,0.9375,0.75,0.9375,0.75,0.90625,0.78125,0.90625,0.78125,0.9375,0.78125,0.9375,0.78125,0.90625,0.8125,0.90625,0.8125,0.9375,0.875,0.9609375,0.84375,0.926,0.8125,0.9609375,0.828125,1,0.8125,0.965059375,0.875,0.965059375,0.859375,1,0.875,0.9609375,0.84375,0.926,0.8125,0.9609375,0.828125,1,0.8125,0.965059375,0.875,0.965059375,0.859375,1
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Geometry: 29532136, "Geometry::Tomato_001-4-2", "Mesh" {
+		Vertices: *108 {
+			a: 1.7339375000000001,9.3105,-4.9365,-7.97425,4.72525,-3.4915624999999997,6.979375,-2.0143125,-5.631375,-2.728875,-6.5995625,-4.1864375,3.297875,9.37725,5.7831874999999995,-6.4103125,4.792,7.2280625,8.543312499999999,-1.9476875,5.088375,-1.1648749999999999,-6.532937499999999,6.53325,-9.6193125,3.6123125,2.2294375,4.942937499999999,10.490187500000001,0.06212499999999999,10.188374999999999,-0.8346875,-0.6327499999999999,-4.373937499999999,-7.7125625,1.5346250000000001,-1.16525,7.10125,9.185500000000001,4.0801875,-4.223625,8.4906875,3.6940625,-5.9723749999999995,0.3466875,1.73425,-4.323625,-7.5888124999999995,-3.5111249999999994,7.001250000000001,-6.8939375,-3.125,8.75,1.25,-4.414125,-1.2180625,7.816375,1.6379375,1.4465000000000001,10.075000000000001,6.7876875000000005,4.0725625,6.1491875,8.685875,5.3568125,-0.45199999999999996,4.983125,3.9956875000000003,-6.219625,-1.0689374999999999,1.331125,-8.47825,-6.218624999999999,-1.295,-4.5524375,-8.11675,-2.5791874999999997,2.0487499999999996,-2.129125,9.995750000000001,-11.5355625,-7.7299375,7.3503750000000005,-10.702,-3.125,8.75,1.25,-10.9395,8.897375,-3.9270625000000003,0.26225,14.188124999999998,-5.5943125,-4.120875,7.50425,14.035624999999998,1.48,10.149624999999999,13.202,-3.125,8.75,1.25,2.0668124999999997,14.264999999999999,6.7745625,-9.135,8.974375,8.4416875
+		}
+		PolygonVertexIndex: *110 {
+			a: 3,24,23,-16,13,19,18,-8,5,12,17,-9,11,14,13,-8,10,21,20,-7,7,18,25,-12,8,17,16,-2,2,22,21,-11,3,15,14,-12,11,25,24,-4,6,20,19,-14,6,13,14,-11,10,14,15,-3,15,23,22,-3,0,16,17,-10,9,17,12,-5,5,18,19,-13,12,19,20,-5,4,20,21,-10,9,21,22,-1,0,22,23,-17,16,23,24,-2,1,24,25,-9,8,25,18,-6,29,28,-31,27,29,30,-27,34,33,-36,32,34,35,-32
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *84 {
+				a: -0.44772055052769383,-0.35128027594401373,-0.8222824796673444,-0.19350502383464208,-0.3404461623747188,0.92013706385249,-0.47418489311113077,0.8313514146511707,0.2898335945032645,0.2339973843731265,-0.9527876693246571,0.1934964632478414,0.9264534754363274,0.21582081538610545,0.3083915263071074,-0.6515657097803385,-0.5294843649480665,0.5432388361613945,-0.6271954586896225,0.767076842792485,-0.13497767908297764,0.7993438090144366,0.21041716632047539,-0.5628268748984481,0.2739386717138758,-0.9259268564907638,-0.26003280671632506,-0.7786724173343036,-0.5348942334050629,-0.3279594876699896,0.5955007420262035,0.03221673041272259,0.8027085078207126,0.5387027922610046,-0.8286004324002657,0.15238315207492434,0.5638526128938682,-0.7697766840206666,-0.29918905005181,0.34128935660174103,0.021376743880036683,-0.939715174875588,-0.3384566273344697,0.9231766101941644,-0.18218687604706227,-0.17065654527316418,0.9554874550842545,0.24066588194433208,-0.3412918993784609,-0.021370309673423484,0.9397143977204482,0.44771486969774144,0.35128849548723357,0.8222820613328798,0.7786681985160727,0.5348935721117222,0.3279705827254878,0.6515583300813352,0.5294839252311242,-0.5432481158949962,0.19350666042441697,0.34044311055144766,-0.9201378488299696,-0.5955088229160592,-0.03220597336163973,-0.8027029444999931,-0.9264542576757577,-0.2158300284935506,-0.3083827284964803,-0.7993534414239,-0.21041300101275318,0.5628147516621922,-0.3107717692098058,0.8130934724152054,0.4922396901693228,-0.43989871711694767,0.8075857325955347,-0.39280326269902205,-0.4398861040963935,0.8075925521485999,-0.3928033670133285,-0.3107677358690215,0.8130957838788674,0.49223841843282856
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *220 {
+				a: 0.8125,0.875,0.8125,0.90625,0.78125,0.90625,0.78125,0.875,0.78125,0.875,0.78125,0.90625,0.75,0.90625,0.75,0.875,0.78125,0.84375,0.8125,0.84375,0.78125,0.875,0.75,0.84375,0.75,0.84375,0.76825375,0.8062653125,0.804765625,0.826394375,0.7801328125,0.84375,0.78125,0.875,0.78125,0.90625,0.75,0.90625,0.75,0.875,0.8125,0.875,0.8125,0.90625,0.78125,0.90625,0.78125,0.875,0.8125,0.84375,0.78125,0.875,0.75,0.84375,0.78125,0.84375,0.8125,0.9375,0.8125,0.96875,0.78125,0.96875,0.78125,0.9375,0.78028125,0.84375,0.75,0.84375,0.76816875,0.806225,0.80450625,0.82615625,0.78125,0.875,0.78125,0.90625,0.75,0.90625,0.75,0.875,0.8125,0.875,0.8125,0.90625,0.78125,0.90625,0.78125,0.875,0.78028125,0.84375,0.75,0.84375,0.76816875,0.806225,0.80450625,0.82615625,0.75,0.84375,0.76825375,0.8062653125,0.804765625,0.826394375,0.7801328125,0.84375,0.78125,0.9375,0.78125,0.96875,0.75,0.96875,0.75,0.9375,0.78125,0.84375,0.8125,0.84375,0.78125,0.875,0.75,0.84375,0.8125,0.84375,0.78125,0.875,0.75,0.84375,0.78125,0.84375,0.75,0.9375,0.75,0.90625,0.78125,0.90625,0.78125,0.9375,0.78125,0.9375,0.78125,0.90625,0.8125,0.90625,0.8125,0.9375,0.75,0.9375,0.75,0.90625,0.78125,0.90625,0.78125,0.9375,0.78125,1,0.78125,0.96875,0.8125,0.96875,0.8125,1,0.75,1,0.75,0.96875,0.78125,0.96875,0.78125,1,0.78125,0.9375,0.78125,0.90625,0.8125,0.90625,0.8125,0.9375,0.75,0.9375,0.75,0.90625,0.78125,0.90625,0.78125,0.9375,0.78125,0.9375,0.78125,0.90625,0.8125,0.90625,0.8125,0.9375,0.875,0.9609375,0.84375,0.926,0.8125,0.9609375,0.828125,1,0.8125,0.965059375,0.875,0.965059375,0.859375,1,0.875,0.9609375,0.84375,0.926,0.8125,0.9609375,0.828125,1,0.8125,0.965059375,0.875,0.965059375,0.859375,1
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Geometry: 84024821, "Geometry::Tomato_001-4-1", "Mesh" {
+		Vertices: *258 {
+			a: -5.042812499999999,32.4448125,-6.6858125,-19.7085625,25.042125,-8.616562499999999,24.743624999999998,42.030375,-0.2200625,12.230625,41.950625,-0.2248125,12.233062499999999,41.93475,8.043999999999999,16.3949375,41.753187499999996,8.04525,8.0166875,40.8675,8.0405,-0.5001249999999999,36.875562499999994,-0.239125,12.228375,41.9664375,-8.4936875,8.011875,40.899249999999995,-8.497250000000001,16.3901875,41.7849375,-8.4924375,-0.35875,38.3131875,-23.95725,-0.4045625,40.133625,-11.498750000000001,7.7459999999999996,40.043687500000004,-11.5115625,7.764187499999999,39.235437499999996,-15.591375,7.7450624999999995,39.643499999999996,-6.993874999999999,-0.381625,37.120437499999994,2.710625,-8.5550625,40.2235,-11.4860625,-8.5560625,39.8233125,-6.9683125,-8.536937499999999,39.4153125,-15.5658125,-25.477499999999996,43.397625,0.1140625,-12.976750000000001,42.636687499999994,0.11825,-12.979375000000001,42.6405625,-8.1505625,-17.14325,42.68575,-8.151875,-8.7975,41.344625,-8.1485,-0.4038125,36.8725,0.12568749999999998,-12.974250000000001,42.632687499999996,8.3871875,-8.7923125,41.33675,8.3891875,-17.1380625,42.677875,8.3858125,-0.1084375,39.066875,24.2530625,-0.1095,40.4943125,11.6968125,-8.2599375,40.5815,11.7096875,-8.256625,39.902187500000004,15.8343125,-8.245375000000001,40.0398125,7.2205,-0.039,37.037875,-2.317875,8.041125000000001,40.407125,11.6840625,8.055625,39.8654375,7.194687499999999,8.044374999999999,39.72775,15.808625000000001,-0.625,0,0.1045,-0.625,37.5,0.1045,1.306375,0,2.8995625,1.306375,37.5,2.8995625,2.5,0,-0.9631249999999999,2.5,37.5,-0.9631249999999999,-0.625,0,-3.3504375000000004,-0.625,37.5,-3.3504375000000004,-3.75,0,-0.9631249999999999,-3.75,37.5,-0.9631249999999999,-2.5563124999999998,0,2.8995625,-2.556375,37.4999375,2.8995625,11.765625,23.87325,-14.298562500000001,5.7055625,23.498375,-7.1168125,10.3948125,23.2863125,-3.186,12.4058125,23.2031875,-5.5803125,8.329437500000001,22.1206875,-0.7940625,-0.5725,18.1281875,0.05525,1.0163125,23.7104375,-11.0478125,-1.0491875,22.54475,-8.6558125,3.0273125000000003,23.62725,-13.442,-13.9214375,20.1305625,-11.268749999999999,-6.840625,21.652437499999998,-5.26975,-2.9052499999999997,21.75525,-9.959,-5.227125,21.045125,-11.93075,-0.3528125,21.24825,-7.82025,1.1626874999999999,18.305625,1.3964375,-10.7759375,21.549625,-0.5806875,-8.2235,21.0425625,1.5580625000000001,-13.09775,20.8394375,-2.5524999999999998,-12.320375,24.0458125,14.7373125,-6.2844999999999995,23.580624999999998,7.5404374999999995,-10.974062499999999,23.7806875,3.6095,-12.989,23.727625,6.0013125,-8.976875,22.5846875,1.175,-0.319125,18.11875,0.173375,-1.594875,23.3804375,11.471625,0.40237500000000004,22.1844375,9.037125,-3.6098125000000003,23.327375,13.863375,13.5511875,19.7453125,11.5358125,6.461875,21.46925,5.601875,2.5265625,21.3636875,10.2909375,4.852250000000001,20.58725,12.232999999999999,-0.0234375,20.9294375,8.133375,-1.5245,18.3505,-1.1939375,10.397187500000001,21.5748125,0.91275,7.8471874999999995,21.140625,-1.2448125,12.7229375,20.798375,2.8548125
+		}
+		PolygonVertexIndex: *178 {
+			a: 6,4,3,-8,7,3,8,-10,2,3,4,-6,10,8,3,-3,15,13,12,-17,16,12,17,-19,11,12,13,-15,19,17,12,-12,24,22,21,-26,25,21,26,-28,20,21,22,-24,28,26,21,-21,33,31,30,-35,34,30,35,-37,29,30,31,-33,37,35,30,-30,42,40,-39,40,42,43,-42,41,43,-40,44,42,-39,42,44,45,-44,43,45,-40,46,44,-39,44,46,47,-46,45,47,-40,48,46,-39,46,48,49,-48,47,49,-40,40,48,-39,48,40,41,-50,49,41,-40,54,52,51,-56,55,51,56,-58,50,51,52,-54,58,56,51,-51,63,61,60,-65,64,60,65,-67,59,60,61,-63,67,65,60,-60,72,70,69,-74,73,69,74,-76,68,69,70,-72,76,74,69,-69,81,79,78,-83,82,78,83,-85,77,78,79,-81,85,83,78,-78
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *141 {
+				a: -0.24538257407659164,0.96942439309371,0.0019334979798705243,-0.37030732569703706,0.9289074017441298,0.0018771041735294132,-0.006373959944690144,0.999977839604524,0.0019217009372374907,0.04356874620717737,0.9990486272486335,0.0018986170113102676,0.011129492970655524,0.9960376249100793,0.08823369055924446,0.01110930744093747,0.9781902839570509,0.20741347993852033,0.010690796062443077,0.989441496196361,-0.1445379966799656,0.010513831436378455,0.9808926448897357,-0.1942654847103475,0.2960061211743213,0.9551859772596808,0.00035365774635735266,0.41674960292306423,0.909021270398641,0.0003137296749776567,0.06075873042618866,0.9981523809258375,0.000448474168294673,0.010851635015402893,0.9999410038626043,0.00048042870416064443,0.010430532630346026,0.9927485485411405,-0.11975609946264185,0.010010949362379382,0.9708706175222509,-0.2393951230180495,0.010806617571506536,0.9935420909990914,0.11294835293095841,0.010808417011616164,0.9866482413160838,0.1625066953377056,0,-1,0,0.9554233363898063,0,0.29523930680343224,0,1,0,0,-1,0,0.6070660013329655,0,-0.7946514141594437,0,1,0,0,-1,0,-0.6070660013329655,0,-0.7946514141594437,0,1,0,0,-1,0,-0.9554189756032813,-0.000001592367613286233,0.2952534183623298,-0.000006180357094068934,0.9999999998172727,0.00001809026195430551,0,-1,0,0,0,1,-0.000016180182508716945,0.9999999998065998,0.000011180429773135018,-0.1975779334388406,0.9375536385638726,0.28627981946634024,-0.2924477668015553,0.8705179714365685,0.39581910653573177,0.000858246427352839,0.9986021191117482,0.05284951389176399,0.043587944809684094,0.9990477886777497,0.0018992117750357726,0.10461603766146232,0.9884694682808772,0.10946960738275995,0.22406060734292432,0.9519197262987895,0.20891548272054292,-0.13465254811782496,0.9866710946179683,-0.09137199970864719,-0.18448352022671044,0.9737296020488654,-0.13347843593074912,0.25158990103383216,0.934290610087547,-0.25259370063409303,0.34256647990527067,0.8658758828225777,-0.36456434602348803,0.056765628953917534,0.9982442191111812,-0.01691574357141893,0.014109264615173069,0.9993202952715929,0.03405695392009403,-0.10977919954618297,0.9915013330433463,-0.06981141683325812,-0.22903705463243013,0.9583438485154339,-0.17064318216069616,0.1295152160341342,0.9829094201618307,0.13082385322549284,0.1794102957504575,0.9685553586753801,0.17237303431784023
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *356 {
+				a: 0.0625,0.4375,0.03125,0.4375,0.03125,0.40625,0.09375,0.40625,0.09375,0.40625,0.03125,0.40625,0.03125,0.375,0.0625,0.375,0,0.40625,0.03125,0.40625,0.03125,0.4375,0.03125,0.4375,0.03125,0.375,0.03125,0.375,0.03125,0.40625,0,0.40625,0.0625,0.4375,0.03125,0.4375,0.03125,0.40625,0.09375,0.40625,0.09375,0.40625,0.03125,0.40625,0.03125,0.375,0.0625,0.375,0,0.40625,0.03125,0.40625,0.03125,0.4375,0.03125,0.4375,0.03125,0.375,0.03125,0.375,0.03125,0.40625,0,0.40625,0.0625,0.4375,0.03125,0.4375,0.03125,0.40625,0.09375,0.40625,0.09375,0.40625,0.03125,0.40625,0.03125,0.375,0.0625,0.375,0,0.40625,0.03125,0.40625,0.03125,0.4375,0.03125,0.4375,0.03125,0.375,0.03125,0.375,0.03125,0.40625,0,0.40625,0.0625,0.4375,0.03125,0.4375,0.03125,0.40625,0.09375,0.40625,0.09375,0.40625,0.03125,0.40625,0.03125,0.375,0.0625,0.375,0,0.40625,0.03125,0.40625,0.03125,0.4375,0.03125,0.4375,0.03125,0.375,0.03125,0.375,0.03125,0.40625,0,0.40625,0.857711875,0.990625,0.8375,0.990625,0.8480009375,0.9772721875,0.8125040625,0.718750625,0.84375,0.71875,0.84375,0.90625,0.8125,0.90625,0.86947375,0.9162353125,0.853125,0.928125,0.853125,0.911614375,0.866855,0.9084625,0.866855,0.928125,0.853125,0.9189475,0.84375,0.90625,0.8125,0.90625,0.8125,0.71875,0.84375,0.71875,0.84943375,0.990625,0.8375,0.97500125,0.8547725,0.97500125,0.853125,0.91161375,0.8694696875,0.9225390625000001,0.853125,0.928125,0.84375,0.90625,0.8125,0.90625,0.8125,0.71875,0.84375,0.71875,0.8375,0.990625,0.849435625,0.9750003125,0.8547725,0.990625,0.8375,0.986005,0.85384625,0.97411375,0.85384625,0.990625,0.8125,0.71875,0.84375,0.71875,0.84375,0.90625,0.8125,0.90625,0.853125,0.9147725,0.873341875,0.9147725,0.8628371875,0.928125,0.8641046875,0.928125,0.853125,0.9122375,0.8701115625,0.9122375,0.8125,0.71875,0.84375,0.71875,0.84375,0.90625,0.8125,0.90625,0.8514771875,0.9713128125,0.8514771875,0.990625,0.8375,0.980970625,0.0625,0.4375,0.03125,0.4375,0.03125,0.40625,0.09375,0.40625,0.09375,0.40625,0.03125,0.40625,0.03125,0.375,0.0625,0.375,0,0.40625,0.03125,0.40625,0.03125,0.4375,0.03125,0.4375,0.03125,0.375,0.03125,0.375,0.03125,0.40625,0,0.40625,0.0625,0.4375,0.03125,0.4375,0.03125,0.40625,0.09375,0.40625,0.09375,0.40625,0.03125,0.40625,0.03125,0.375,0.0625,0.375,0,0.40625,0.03125,0.40625,0.03125,0.4375,0.03125,0.4375,0.03125,0.375,0.03125,0.375,0.03125,0.40625,0,0.40625,0.0625,0.4375,0.03125,0.4375,0.03125,0.40625,0.09375,0.40625,0.09375,0.40625,0.03125,0.40625,0.03125,0.375,0.0625,0.375,0,0.40625,0.03125,0.40625,0.03125,0.4375,0.03125,0.4375,0.03125,0.375,0.03125,0.375,0.03125,0.40625,0,0.40625,0.0625,0.4375,0.03125,0.4375,0.03125,0.40625,0.09375,0.40625,0.09375,0.40625,0.03125,0.40625,0.03125,0.375,0.0625,0.375,0,0.40625,0.03125,0.40625,0.03125,0.4375,0.03125,0.4375,0.03125,0.375,0.03125,0.375,0.03125,0.40625,0,0.40625
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Model: 78713839, "Model::Tomato_001-4", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-343.4375,6.25,-45
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 20976102, "Model::Tomato_001-4-1", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",631.5625000000001,0,31.250000000000004
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",5
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 59734362, "Model::Tomato_001-4-2", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",643.4375,27.5,28.125000000000004
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",5
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Model: 92685178, "Model::Tomato_001-4-3", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",618.4375,27.5,28.125000000000004
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+			P: "RotationOrder", "enum", "", "",5
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Material: 96321444, "Material::t_Farming_Tilesets.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 16161662, "Texture::t_Farming_Tilesets.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::t_Farming_Tilesets.png"
+		Media: "Video::t_Farming_Tilesets.png"
+		FileName: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\Farming_Tilesets.png"
+		RelativeFilename: "t_Farming_Tilesets.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 48289985, "Video::t_Farming_Tilesets.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\Farming_Tilesets.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\Farming_Tilesets.png"
+		RelativeFilename: "t_Farming_Tilesets.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAD4AAAAlCAYAAAAa0FocAAAAAXNSR0IArs4c6QAABSZJREFUaEPtWDloVFEU/ZOdxC1FRBstrMQUKhIJqASFCBaChXHp1V5ERKJGDSIi9mrvEgvBQjCgBBGCQdQiYiWojUGLuMSQfeS85PycufP+zP/5PwHR37y57923nHe38yYX/KNfDri7evblp+tqC66gcmw8lLs6Hud8OlCg3mLr2POktVcBcC6OS4gCXj13QZNyMdBV4FnplDoPgZ97dCB/ef9DhyPJ5yZgMjepWLUinD/z/af7DVDQwW+C4hg9BZtnqRPnPNwzNXAFTfSwLDfAYaw3QA99i6FT6jynb7Xlrx3vcyFIwyS5gNDijFe7GSyrFte4hi7GFTi9gv2U9QJ5qWpV3zoYjzoPgds2rrsXAOckG6PqxlYHsoLiXPajHR8adtNgIRy0dk2jk9mvMnUwzn7feeICjNLzArcWsRb3XVBUjMMbdrypclP2XniQe3LxYP7p2m9O3vOlybUqUwf9L7ZMuSSrnoX+NLHNsxeVM18cA/il3sN5m8kZ38zqTG5aEQg8V10RtJ+9n+u9ciifn5xx+6MPn8qqQ+BqNQ0rjemk2T1xGUjrYlnNt0mNctz1Q4vTetbN4Wbn2+85i3MMllerot8XDnTT7f3TzrqwJlzdHm58ZCqoXVYV6tAr+jf+dolTP+UM2NNm9wUD10SirEyBY3G6vU9HQ4LrATzil6AAFl9dY03BWXk5L1srXcVgVtc14eKZZHXSUc3ICg4bWeA+AkMdHfMBd941OhvnlfWzcT42POEuQYEDrI8wJanXUR4QZnULmsDVtXj7BMZFLYHRzTBn5OOQy+C0uE1oqk/gyPQsZ76wiuvSZYFDwYJXygqvYB6wdNKyO+hpCUI506xuDwNr0+1tVndeMfcu4JqI7UyB6waawPgAIXB7SZaVWRIDWWMcQJnM1O0rqudrPWLclyugj2SbCXBbo3VR+/LimAVn2Z0mSTA0dXXWbaxla7mSHLq63XPRgWvGJjnRSwE4Zl4cxhIYliKfqyt4ZHhmd3V1tbo+UTNLbmnd5m+c72IFtXXw7Qfv+Zs3bwip5kDfO69OS9smpxNFclrfNxSRE5+bW1oLAsO8oqFFV7c0NQltdcBvdGwL2dTv0dGgob6+AODJnle57vbmUOfX6FiwvL6uQKezd7Co1jM52UcKODg+9lPeOThfxzHOflttMgVuAatM4Bawyj7gSmSYJDWR+p6wiF8SKt+/MJrVyd5oaSuXCsEii/uUrcV9OgCOA5cjOcoHouix/hXGvXRdvgtQLfB+Tw2cVratAqeVbUvgjMkokhOHHgOIj6raKgPgKHm8AP7JQXlJLR5FcuiiCkoPRsLEt78dg+wDTj1cwNeBT8HqlvXhRcQGrnHti3EspHFtY9z+9+5LSvafWB5O6XHUS5Dg+Rz98flnsHLdisDX3ux+XZLdZVrOFkJyELuWHgM4iZHSVl4SEuCJzq1F73q1cCzgfyMBSXvmTC2eFRFKCyrO/KJyNnjmWNB89XZJAnN31+7gyPNnRQRGiVBlzfVgeuJUyXW+DR8NmhrvFK0T5+BWJwlrw9wQuAWsMsuZBawyyhmAW8Aqcx0LWGWskwQ4Adu23BqZEhi1eBoiVO7QGFegkJXMQC73gisATivbVgkMrWxbWtyVnDk3t62uQyvbNq7FlaywhiOTox9nAKOLXcejFONS1qW0OAFqDQd5AYlBbU8EXOPaF+O4GI1rX4yrxe1vn8Whs5AYRx0neaHBVI5Vx7MqQ1mtEyfG/xOYOLfk0fkDWx8fgPLjoRcAAAAASUVORK5CYII="
+	}
+	Material: 90477414, "Material::t_WoodFences_001.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 3717210, "Texture::t_WoodFences_001.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::t_WoodFences_001.png"
+		Media: "Video::t_WoodFences_001.png"
+		FileName: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_fences.png"
+		RelativeFilename: "t_WoodFences_001.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 87652914, "Video::t_WoodFences_001.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_fences.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_fences.png"
+		RelativeFilename: "t_WoodFences_001.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfNJREFUWEftlb9Lw1AQx1+IVkQFh7q4ODs5CILgIC46Ouni5OAgiIgg/gkiiIjg4OAkgk6OukiHQkFwcJK6ddClRSwqxdgQ+QbvcXlN8vqa1i7JUl7u3t0n9+Nb62RlyhN/z/r5vWV6vt2alffnD3OWeqbYUb/W8fK01zdgi7rjCAL4rLhiMGuHnskfAdfO8tbp6owEwBl22BAT56YBeMD315oYHu2XCfiZAL6/XLFxWWhIqAK1DYAqQgkIQE2IM2x4AKgFCAsYVwHVX5dAZ5c95F/UDAC1TO25cQsw9T2ZjA9KQ6UDACwNWeIWAMD9sQMBAcB7rgIBwO51/S1Re95SBQBAAQEUt4YEzP3jdEQ7A6bCo/rrEujs2jXRBUhqb5DO/YVJqWw7Nw8BO5KVqnV/WLnk8vemQH6gx6cPMTE+JKDlKgDfewQvvLyJi3xRKiDJbu657L9vCYAuxQGQDzYCleHTDlvLADpiXhHyBUDUe1081S57yb8eCa6Otr2lzYP/mQFQAYDT3V3veXOLuwGhgfpRC7gEt70FSF4plQUqwP//eSI+A1BGGk7jFoRdQPmzYyMCFej4DIQB8ApE7XvbdEBXgahed3QNeQXUXteqjq8DBJZYiKKGhragKzNgOslJ/I21O0mysLspQFqBtAJdr8AvqH4sPxpZ32gAAAAASUVORK5CYII="
+	}
+	Material: 7059830, "Material::t_Fruits_001.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 50738649, "Texture::t_Fruits_001.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::t_Fruits_001.png"
+		Media: "Video::t_Fruits_001.png"
+		FileName: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Fruits_001.png"
+		RelativeFilename: "t_Fruits_001.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 63173417, "Video::t_Fruits_001.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Fruits_001.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Fruits_001.png"
+		RelativeFilename: "t_Fruits_001.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAo9JREFUWEdj/DlP+f/LA78YxB3YGEAAxl6xg5MhvJ6X4dMpRgY+s/9gORg75uF7Bv43Xxjmxj1hBItPM4YoYGBgSFL4CqbXeN0Ayz3WVvsvI6PIEFP/BCy+1OoqWBwGGB/Fyf7nkOBEFmP48eI7w/4f/GAHwCwG0TCHZJ99DBYnxgGnlJT+S3KyMBR2M6E4DO4AUAh8vMHM8PjhD7CYrDwHA7/GX4ZpS/8zZE4Sx+qAqqMPGB7J8MN9+axcBx4Cpf4QJsynoBAA8cl2ALYoQA+B7VG6cAcsyfmH4gBQCIAEuqawwR1MVBSsfcoKDgFcDvgowoM1BKQ6r6DE8X93d7ADQvMfYncArkTInnSX8UoVJGilnUTBjn667zWYbrD5g5IIQWIHks3+O8w9hWI5SBwWAjMbfsHTDEoIvCpT+w+Kf1DcgwCMLdZ1C68D5J58ZOhLe45hIUpqhjrA7N49xpBtGv9hOQPDAaBUD8sJMDayA8RU+cB6Xt3+BKbnKbwF08Q44Mkrl/88PJwMTUvOYFXPCAoBUh0AigJiQ+DOcYv/HMo8DH0brmJ3wKNspf8Mn38zMPCyQkIGypabeg8eBdhCADkbogc7Mh8UAiC+jNgerNHFSIwD0C3o1/jAgJwL8DkAFAIgeRXLE7gd8PrNHwZRERawOTA2cgigWwBKA/p7hBniV6FmOWwOIRgCZ8Pl4IUIsgHGKx/BowDdYFAasO79xVC49x7BXEAwBMhxACgKYPUAvuAnRo6RHAfotBEOemIsB6nB64DoY9rw6Pn54S/YTGyFCbGWYVM3uB1Aic+I1csIC2ZQEFM7eIlxxMA7gBhX0lINwYKElpaDsyGtLSBk/qgDRkNgNARGQ2DAQwAAAreUMIuoYEkAAAAASUVORK5CYII="
+	}
+	Material: 80516277, "Material::t_SeedBag_001.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 87363167, "Texture::t_SeedBag_001.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::t_SeedBag_001.png"
+		Media: "Video::t_SeedBag_001.png"
+		FileName: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_SeedBag_001.png"
+		RelativeFilename: "t_SeedBag_001.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 4649376, "Video::t_SeedBag_001.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_SeedBag_001.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_SeedBag_001.png"
+		RelativeFilename: "t_SeedBag_001.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAA6dJREFUaEPtl11IVEEUx8+lyDJ1/cDIjzW31TKLolIwlLCUiKLIMBAztizQIDHLCi3tQ8sXy8KXDAolgx4ESbKH0KxQesjSpCzdNkNdhTJ1TSKivHFm2wPOug9zWVuVe18u/Dgzc/7nP3PmXglm+SNh/r19z2VeR4h2s+QqLlLTuSHgXWetHBCwloQPDnbA6sgkyVVc2IGXL6rkpUcus3HBwTpovZAK0ZsMEvJltVauifgDHasKif9qr2PczV8COWgXcfOQhXEPbx/QzJ8gPlReyvg6rQzmPaeINx0tYzx+bAyke+cZFxaAlfbad4YEdJZlkgP+lVaOAj7GlBIffVZNAhZF7iduNPWRgAA/D+K9xYUkYMRQRLw+9SIJWPzwKuPCArDS+og4Gmf60EwVcgVXJIAfZNtCruDCAqpu5tm1UUNmieQqLixAZMBMi50b94CrblxH64q4zBxw1YXlaF1hAdhGu2qD2LiNUStgXNtEbdTzbQnjATHu0D2eTXzBQBPjodEh0G3WEz9mPMt4WJgGjkuniRszPBnfHh4Gptw24gWH/Bn/vjwIrhe0K7/I2iqtC6CAiTWv6KKZ15JHAvrnFRD//f4BCegfX088vTWLBOR7FxN/k2JtdChgsMhE/OReNxJwq/STepHR9lMvsn+lUHIhCh9ikQEzLZa10XMDrXafEsWBUVJNybAdT87zlRzFp7RUTYq/H2tw+FfHf6agU0qKo0hA+usKWaPRgcXSA7b3nQ0ZUo7pscwzbNHuGi/4YRkD2xvPF94BPFMsABcu8NXDwGgCBHo3QtGwCcr026TqHJO8oxDA8iQBNFsb4dElgLQyvV2iKALjeWHI+ERRBH7z88JE/wNsYpkDuPAJH+uFhc+1kTzAit5IeyrvTjpIvK62ErKr4+0Sxaq73IG4sQxY6S1D16gEzV4V5EB4UCws0S2ELz0/wWhuYQ6gYN5uFMBzZFhpPnaqFi36K2nnQKkuEZo+J8KW0AbI7WkgBw6Ua8F4OxbCD7fA3aw+cmBGCcAzwCeE+xe3EM9xCyk5bNM1hiXDtz9k2AKv7KyxE5Bfn+ywvfLxGDtdiU/aQqKLoDN+/lr49rUPbG90BrsWz0TnFo1XVCE+URSBh5sXhkw0IdF4RQvMegccHW6e/48Dr9iBqbrTrBEguk+nM16RA9OZkOjcqgDRijk7XnXA2RUVnU91QLRizo5XHXB2RUXnUx0QrZiz41UHnF1R0flUB0Qr5uz4vySSg17MLdQ6AAAAAElFTkSuQmCC"
+	}
+	Material: 7881448, "Material::t_RockFence_001.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 47667333, "Texture::t_RockFence_001.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::t_RockFence_001.png"
+		Media: "Video::t_RockFence_001.png"
+		FileName: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_RockFence_001.png"
+		RelativeFilename: "t_RockFence_001.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 60031237, "Video::t_RockFence_001.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_RockFence_001.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_RockFence_001.png"
+		RelativeFilename: "t_RockFence_001.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAwCAYAAAChS3wfAAAAAXNSR0IArs4c6QAABBtJREFUaEPtWT1oFEEU3kVB5A6EYESRIDbaCjaKKUQRrQTtIhwGiwOLYCN2VnYiiJVwhQgBxUbBShAlRSQ2gq02FkEQI1fdIRZy8kbe8vbjzc5bb3Zzi3vV7c7Me2+++d7fbJr857+U9r/U608Yh6erg1Q+03t6x+M49/rNO9nah/duZ/MQ1yIdqJOeUe7g2uLk1/i3E7ursyNZ+7yVPFn/lF5ZPDo5eXAue09/+o/WvXagXW7i2XOXJ51ux429fLGaXrzUc5saj8bu3ZvXzzOBPMZzrQDQOikPddIzG0f6NACk8RKA00fmc/sqDcBy/0am/PHgQSqfh1vDZG7+L8I4Rs9WD2KZm182HaCaThpbOLzg9CAAdNLHut1M3cfRKGOAfH9gaSXpXV022xV0ge/ffiT79u91ikNUpTk+N2AXGI9+OpZpLkFjne7unMvxjq0AMDDWg3EAaPREAeQi7B6SyvKkigCQbkUMQMrzM+s5cepMxsr3796mFANCLsAxYuXZRjkGkHFIc6ajVCpdgKlsBSBEeQJAMs0HAG9y4+swbhBEmjMdJQDSBZjKVqqFKE+HQPRnV0MArHrKzsuyAC2UNJdZAMekC0hDpXKirXwOZQF0EdzI3QvHcy5A47defXCucWjPztz08/fXyrkA05MiPvm5pKt0BXYBGa2tAPiygKazTHYpe+I4P5cFtAgtXYFdQEZrKwC+LEBZhoIiuggaSllA2ywVQ9OAMNXiaRTPytoWgKKTKOoJpl33r7JjM6eQAbI4IcUUIC0GyIhP82UvwetlIcTZxyI79hy3IYrQXPNjvV9UEMk10jAZ8am251+RbB5DO3w6YgGRZQGu+bHel70AK+U5co00SEZ8Lm5ovEi2JpPk+HREBQDrcmyHuRBipeQKuAaLHnrmgonXa602jmHLzHI1N4oBQuYCSFPZBvOYz02wcAkVUiQP5WutNvYPMTaMMrztsEZ9n5vIGyNSICO8r51G+VqrHSqOYgCS6wU4YmOEllTW5iA95Xo2kiM9jmk3UbRGa71jbFhlAFFN1veSerQAM4HWE2AWCLXT6AbbngVkfY9FCrbGWk+AWSDUTtN8zT3QzWrJAlVQqykyXQzAWx00vui6W9uo9aZ4FkAyA1AmIluvyThjsEthNqkDIDMAoRsbaawGgI8VlBX4krSqYqcISFNzU/YkLABgkUNAcN9Q+42Q71aHN473e2UB0eajS+GlaAwdFhmOAbEBsFyThS5JLcbHmLNtAIQ+lcXYnEVGJTHAwoDQpzKL8THmVA6AL374PpXVfTtUCwBaDTFTWSAGlaQM/Kyl1RAICn4bjG2TT14lDKjL+Bh6WgBioNhkGS0Dmnx6MWxvGRADxSbLaBnQ5NOLYXvLgBgoNllGy4Amn14M2/8A/gMSbXGfVlkAAAAASUVORK5CYII="
+	}
+	Material: 36221795, "Material::t_SellBox_001.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 40977382, "Texture::t_SellBox_001.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::t_SellBox_001.png"
+		Media: "Video::t_SellBox_001.png"
+		FileName: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_SellBox_001.png"
+		RelativeFilename: "t_SellBox_001.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 23623975, "Video::t_SellBox_001.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_SellBox_001.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_SellBox_001.png"
+		RelativeFilename: "t_SellBox_001.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAA8lJREFUaEPtWEFoE0EUnQUJVWMjpcSAIoJBoVQpYjFgKVF66EkjCPXmSVAKHiR4EA89FA8SPAhFwZM3C4LRUw+ioVSoVKRoKSgRJSgkoYipUUsRIn+Wv/ydzO7OOpOQQvaS2cmfmf/+f//N7Fiv755r7IhFWOVDje05HGPwfHlVZQdOxl3t37VN9rP8x7E5cnHWmj490OBGjLHnjf38d8wqYZdn/80XqxYfc2PcGe8aJLyM3Zrj9rLHQgDgdHxwNwMwCIA6je1die3chgLo7+1ha+sbTPUXAdzPHOMA6t83Hd+ifRHehj5sX86/DQcAswFOV1d+uLKBIBGAqtNoB84hAL+oq/5nvX840RDpIdJJzAxMbjIDorN+ERdtmwCIYCi1aGZOXH3Ca0AnA0ihlgBAroPTtA2FDiARACweFoRYA0YAINeR90gbSifa7rgaCAIgAuuoGkDtD5JRAGlShYzUAN3IZFynmfHbyJDH7+LDLkofrS41KaLRGlDV2061s9Kn7O38Qqyq5OOjmn3EKLz03t5VJvKiT1hF0gKQn0xz8NFYD6vXNvjaxYMTLh+Sn2b5O7XJzBQsYwBUJ5JFBgCAY/RBINgn+79jAMBpEhwuf1tXYQ1LDtj08ztdKk1EjJRTKcsABRB0foFMAwAA3JEZ2JIAsAaKq1WmAiCxt5cnsmMy8D8AoKiN1oDOPoCfhJABlYcWMY5dXvjKhkb28eEqbRG89j4gyiQ4QqXUT0adT8nMpI0/P2PvGX0R+zNT0i9SVUuF6EY29zfFFx/5VeCbFj7YP75t0QEGNaCSMRUbYxOpLEZtZBQCKiLNaJtSq4lCqOUw+cLONF8DokWpIPbjZkSvRZA2YFsqfWbVSoUdH07xjHBakKyAE7AviLcR9dFLrjhE5x803Vg0USg3OtjA6wvuNLniwNnoVQdyFCaixxAcV06dZ2+W7AAAgMTiY+d6BG2y8yvGMm/JoihGjIYFIw08pjWANkFnIVn2/OgXJLlW7s49fqIcWnsqnUdUlOX+s9wue+2KMxZOnDI1EkHhSRXGihQSs43vQRuklb0+xQEkPz7zvCGjkxcPneGvudtTrrEi/WS0BHrhWL+oh/nPGBfDLGrS1nVB6zcxfMdivfhtVKY5HgQ2FAB6GStTJspbP3WjY3UVKRQA2ReYl0J5qZuocEEqYzQDVLFkNJIplJe6UdsgJ/3+D5UBqlgy1fFTKNEJats2ADoLtWrs1pfRVkWmXfN2M9CuSHut081ANwOaEehSSDOA2sO7GdAOoeYE3QxoBlB7+D8xl69eyj3t1QAAAABJRU5ErkJggg=="
+	}
+	Material: 71075968, "Material::t_Packs_001.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 69246380, "Texture::t_Packs_001.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::t_Packs_001.png"
+		Media: "Video::t_Packs_001.png"
+		FileName: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Packs_001.png"
+		RelativeFilename: "t_Packs_001.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 11840073, "Video::t_Packs_001.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Packs_001.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Packs_001.png"
+		RelativeFilename: "t_Packs_001.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAA7tJREFUaEPtWE1IFVEUPjfLZ2bhD1QLMwJXKdIP7/UPuSkfuHBhGRHooiyKArGMIIoiiCwRiqKshUJElgsXwrM2T+jfRz+IthIic1GBP5SZWjZx7uNM15n7ZsaZEceYt3nv3jn33O873/nuXGUwxz8M8XdFjiiZOctgsO8LpC5Og9HvI4Dj7LwzrL/nvDI29ANa655Axc3bKt3GQwegpHobpGQs4nGyOuy9UqBkL8mE/m+DsDIvCz72DACOays7WE3DdiVpBYOshnFd3oHKAEx+UnicWX15AIFEMEiCyBSErzMkhzGPG97qNtpRuZbnxzjZRgQSwSAJInPveBdDcrhm3bM0Xd43W0Z4OoyzREBUQFQid+sl1vv0pILE7p9u122050IRoDoYZ6aAqMTFcJSdihQqSGxpZEKX92s4GVAdjLNEABWgyiMgUsINBajyCIiUmBEFxN4nL5ACWAW7HhB7n7xACmBeVzxgJpOXn/Meoz7vvBWF4sstKt62E6VQsDvEx6gGGbrxXBSCx6rVuNjVOqg4W6gzNPX5xm6myxsLx5ejGmTo5S2/dXk/l843NLR6jHIikfe6jXLDq1Vg0yVAwEr7snR5W3IGVGCOCaCJMZtMgdDBeGXxrJ8uATxGca1MgZf5/BE/6x0TIGBzWgE8PrsedEo9QG9bOwrg8RmMgNQD9Lb1FfDyMWmGbcqrGs1MFzPxNyWhOWwluv/I4rSbopnpYib+pjiaw1ai+48sTkbG9K6hBS9LIhIyq5gROe0zkVCivOptNNGVeKbAWa2wWUEsK2BExEobJQJiVGUrJE0VcALOCIAVcGbVx+eWFTAiMlNtZtkDMqPKQNGc7DQyqpbZKURAZaeRmQqWFTBLNFvPfQKzVXna9/9QAM2Znl+mFnO4u5n/q+RVU7mSFixR50dirbChvIlF63cpfQtz1fmcn71QWPWQPaqK3///DE1MEWZeRrI63lnfwa6VbVKSFkzC4budjguo/kXmBoFIxWZOQARMyIlUuPE5u7EvpEz+SoKjzS+8RQAVIKBaEiIBzypALaStuqyFMMZzCmBrILDx4bgHAun/ep/mq9reOW4b0WCGHkh0RCYycX3xGk5ABK4lg8b9ELvD41YF9zsm4ziBSLK2aL0yOjbOp1JTAvybxjRX0/7a2wSIkJYIzXuagKyFCDi1EnrAsy1EJhaNrPWEGy8vnYln+z7jZH9XTewEiN21PgG7lXNrna+AW5W0m8dXwG7l3FrnK+BWJe3m8RWwWzm31s15Bf4CqQBkXgklpaAAAAAASUVORK5CYII="
+	}
+	Material: 46482949, "Material::t_Trees_001.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 29123838, "Texture::t_Trees_001.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::t_Trees_001.png"
+		Media: "Video::t_Trees_001.png"
+		FileName: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Trees_001.png"
+		RelativeFilename: "t_Trees_001.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 73281644, "Video::t_Trees_001.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Trees_001.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Trees_001.png"
+		RelativeFilename: "t_Trees_001.png"
+		Content: "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"
+	}
+	Material: 32690592, "Material::t_Chest_001.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 99939814, "Texture::t_Chest_001.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::t_Chest_001.png"
+		Media: "Video::t_Chest_001.png"
+		FileName: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Chest_001.png"
+		RelativeFilename: "t_Chest_001.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 9864575, "Video::t_Chest_001.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Chest_001.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Chest_001.png"
+		RelativeFilename: "t_Chest_001.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAgCAYAAACinX6EAAAAAXNSR0IArs4c6QAABC9JREFUaEPtWV1IVEEUnn1ILVYtFVsoy6UVKrUfyRAy0yCSHlIoooIIH/pTCCrrQQp8iB7KCgKt6EEiqIgK7aGMQMUKJMMotQI31pRgFbXUpdQebpyRczl7d+69MzcKyp2Xca53vr3nu9+c78xcF5vlzQXxN1QUalY8lNa2umoKsoT3VLZ1cwzazu04YYlX9eCiqyy3RHhPfUdjBN71cvFv428equt2nd62VIh39vHnCDz6rDoB/q5hIQe+7BTmhIDefr8QL2OJjzkhYKBvQoiXlh7PogREFfAXloBKroQcYLcEVPAgB9gtARU8RzngWmmO5luZykJjkwzzxZr8xXwc/DLODjd06slGhgC4Z0vxLhYc6GMPn9zmz1R+sIqPu3pe8TyBDypDANyzcV8OC74LsObGfj5175lNfNz79ivPEyKSpJMgEOBZlMDciXHM/36IY9GxEwKyM9czT1o6e9Z0j+PRsRMCMlYvYJ5VXvb8VifHo2NbAuxskCoASIA3j71IAVZ4EBxVAJAAbx57kQKs8CA4qgAgAd489rYKKCwq1nYnzrxVY7s7lspaW5pcVAE0eFQEVQDgeUOxQryAe4rjAQH4xmnwqAiqAMDLn/tBiPfixwqOBwTgG6fBoyIsFQDBWTEMwdVcuqq5224IbwsVHGCVx4/oa8ysyMHJUOwA3vRLca0Qs8EXhmdW5CAeFDuAF++vFT7fhK8iDC8iCcoQoJJlZQhQwZMhQAXPEQEqS0CGAJUlIEPAH18CKklQlgC0QbskKEsA2qByEpRZAlEFkELIzgb/OQXI2KCKC8jYoIoLyNigYxd4eqxQCwTG9cSIfk6XhdebwLZebrXcVyNA4NEn7c7NOh0P/ZyeEezZX86825dJ4QUDR7XGC806Hvo5PSMoObmZebxXpPCMbsELHHoRPB2ameeb2Q0SZzwMAU+HZub5ZnhInPEwBDwdmpnnm+GZFkJIQObyZPZ96iebFzsnrKfqCI1OC/HdSTH6ZggJgAyfsjCFDQ8Oh/VUHTI7RiQAMnySZz4bDX4L66k6nOwYdQWAzI3Bw7jn44getAoBIHNj8DDGjQ+AqhAAMjcGD2Pc+ADebxEQVUBUAdEcMLtzgNPdFM4zs0GnuGY26BTP1AaNhZCoDqCFEFRc9CHoOQBcNxZCojqAFkJ2eMZCSFQH0ELIDi+iEIILUAugxQXzdvJ7PO33Zwoi4vEwrjxVrfX3B9jQ4CBbl5vHas5XC78MocUlF63lOCMtb3iPH0bwQWTw6KHoZFYZnxrXXc97/DCigkdJ4A9Pq0EkAgI3yhsJeN3Rzv9lRQDORSIgcGz0uAsIsMOj1SB6PQSOjcpbBk9IgEyRgxNhcwJ/w1mcUVIwljkWp/Ps8GSOxVXwLBUgCogeeIr+b7wm83FUBgfvkfk4qoIXQYDTyf/DvF+diO9dW/CeoAAAAABJRU5ErkJggg=="
+	}
+	Material: 81985135, "Material::t_Fruits_002.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 96884967, "Texture::t_Fruits_002.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::t_Fruits_002.png"
+		Media: "Video::t_Fruits_002.png"
+		FileName: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Fruits_002.png"
+		RelativeFilename: "t_Fruits_002.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 64862408, "Video::t_Fruits_002.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Fruits_002.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Fruits_002.png"
+		RelativeFilename: "t_Fruits_002.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAwCAYAAAChS3wfAAAAAXNSR0IArs4c6QAABYBJREFUaEPtmn9sU1UUx++LIstW2pUfKoIzdmKKyNgYAzck0zEBO4mLWxbjL2YIRg1i5gx/CcHMv2ZwgWg0GOMGmuiyJRBcBYThQgDZDwcbygJb1cLE6bBr1zYMTK45p576+vpe+9q13Wvo++e+9+55957zud9z3n3rBHaLHwLEX2k1c2hbLAMCnRMXuNdpMmG/0rHcZhMuNNt5T/dFlr/sQTSjc2vHj3htKV6KLV3XflQueK6Mc+eohxlmZ2AfnZ/57kLQVCUvLxfcv3q5a8zF9Jl67KfzzuPnZe3VrG1MAcCE23RrcN469xE/CDgRg4HrF+pLEQCcb+grQNumnC5sQwGA/uqffTAbH/LBnTSAjXvnc+dsHSrg+VOLAlb7y6KfUAHf6/XsMZeLQQsHnUNLCggFIMt0Fz5nt41gqykAIHvDqJt99tIVWQD1ublcHDAEIAay9ezZsClQsDgbA+/qH8JWUykACoDgwbHJKECuBiysysJx5Q5N1QCQPzgpLojktBoFgO0XW48GFUuQelPVw3xD8/kgEC27jqN9UfFCnOpUh6/4Vb75uCw0sl9dnod2x/b3hrRXAi++jxPJKQByn+7TW4DyHyQvN7gSgIbVJl5zzBb0TPvnnQjAnJeFww302rGFii83PtnnlfjeNL3tF0PaqwYgNqQUAAB0XwnAyKGdfGRwhOVsrkdbJQBKjlBA8xbciSbDl/5UBUAtsKgAqHlIySZSACTpxfn345D9Pb+oSgG1KaMmFsUCpeZhqU2kAKKZI9bPxBRArJ1LxHgpAImgrOU5UAEDn5r53EfS2evjE35f4S0AewLaHsO1077d/56/Mexkcwp3BWye6M0Br08YiDZX0QIYKungRqORORwOlt1eHBe14qDO/qX86g9eVrfoNlkAtB8gAKP9dua+ztiSisagrXPaoDMg3slA+Luij0PwAGFma078AJACNl72+p2nT2PaIULHUFu1XwGJAJBwBbw/3e0HACsn3iESAP1Mg98mnilw+tHD3HPdwzLSMpi4Le1+JqZKwMEcziL+9bsTrCvX96lK+SsFcK61muvS/ld4dlmj4veDNO9n7czmD8yZYIN/TWfUritMY+5rLqabpfe3VEf2mJu47o4ZzH1jnInb5/riAECpSFERpP7TH67FFCjcfDhgFdQUvRV753Nx8ADhbqMQEDzAOLD+ckxXOFwBDprsk7fyMchXP+jxvwXCAZB+QT598F4Oqyr+nohUAaS+dWYr+nNowBIXMEGDQkGECc2bfH8fFBfBcDShn4InaROESBVAc08pAGkNkAMAgYGU/3DwkJIGMGSj1IrlLwYwbprHZtiGcfpYKyGkrNQAkAYmzfMz//2lSQpKDgLZQqDiFHAZjUzvcCQegJoUkAuMIIDHFFS0ClhpOYcpedK6JDE1QCxzNQCkgUHAlO/Xaof8TkeqAJpbDOCVr37je569L6YgJp0CagpjNDaUAk/esxsV8O3vW4SymhO8rWFV4gBE43iyPRNTmskWPPirGkBX3zeyvw8W5DwllL2zIKCv7b1LqsedamhCd0slOr+ssiWk02IATqeDGQxG9H1Hc41sDDuqGhjAmeoAw80fFQDxoEoAatZuZ6WrXtQ+gJMfV4T86Xvla60YBClAvPqhFLBpxRusfP2W5ADg9biZ9+pNNi3zdlzcm2P/sPS501h6ho5JAUglpaSAZKkDwoHaEg7BSg8AAvefeNv36Xv0xD5ZpYDMk7oIWuvWhEwBy7YjCGD/wd1cl2lk7jHfnpzOQeZy/1USrvhopV8gABSokmMAQK4PAMj9pK6VAMP5ERMA4SbRcr/mq3S84aUAxJuw1sdPKUDrKxRv/1IKiDdhrY+fUoDWVyje/t3yCvgXntoLbULCNgsAAAAASUVORK5CYII="
+	}
+	Material: 13150615, "Material::t_Rock_001.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 63159017, "Texture::t_Rock_001.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::t_Rock_001.png"
+		Media: "Video::t_Rock_001.png"
+		FileName: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Rock_001.png"
+		RelativeFilename: "t_Rock_001.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 58808960, "Video::t_Rock_001.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Rock_001.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Rock_001.png"
+		RelativeFilename: "t_Rock_001.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAsxJREFUaEPtmD1LXFEQhlfQDUvEKqWQvxGwyw8IBISQQtBGsEpjmyptGivBJgGLEBCE/IBYhdilEMHeSrCIYliyCivvlXeZO3vmfNxzdlfh3kZ393y8z8ycmTl3rvPEnzlL/6uV10P52/Gvn+bYWdrAKUqLp8CSEFvbn2oG2v38sZGBxiZZ4ktCaPFcuwnECCAkXIeJ9oYUFRLyqAAsMQC2QB4NgE+8LyxaABHPWWegqQdKpt1aFoo9yDzATQHWNz/UUmgK0Ne9nZrmmQC8X9sc/rvpV7qfL/ZG+m8Ht52F7oKX59v+XjkA7ARr9pZeODe1stDqu43hYHBXzel25yvREI9Hf68X9gJgcCiMdP4nQP/6sqNBfABSNIUDJhsgJR6bjkUINZ1reiD1YP3vP8Tws95DDOMz/6c4feC0aCaBUOX2wY4ORCpAjAV9AMWbuZIAN1fXFd/B9y/ODnMildgVl8wMEKPTm5Xy5JyZAUCElQ2kQILpnM75Pw73zR6/eAjRAxAj05ksNBBMsczf+juA8zedMeS5mRiAK2ykR6QICeGa5wNIPXNWQmh0jYvJQKEx8DihrfZBhqZljGQAVurc+zEBeNZ0qNLroXBMAij5piK1Gmd5ILU/CoVPyd/HPODKDk8GwFUh0WWenZ54jabPQyg8GA4lUmnNAyUAsMbfi/OqXsg0SwvgcLJCTwUAG//5fRTtAYTb8vLL2nhkGmQZQOHvxDzA4uK6mKS8bsSNy0cseySroIVaca4/FkKIeTwSAv16CkBKltEtDIoaPOXro+T6JoAlAmCElGNiLabXffN2bYizIh9A+NoQE0CWd8YtBrMqymqpm7rYDTUA9pQ3Od70YtereYBvC2gR9ihWuwwx7FxjXZ4SXjFjk1qJmAWnPaYFmLbF9X6tB1oPZFqgDaFMA2ZPbz2QbcLMBVoPZBowe3rrgWwTZi5wD93G5kAQrNcQAAAAAElFTkSuQmCC"
+	}
+	Material: 3933963, "Material::t_IronFence_001.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 16034180, "Texture::t_IronFence_001.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::t_IronFence_001.png"
+		Media: "Video::t_IronFence_001.png"
+		FileName: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_IronFence_001.png"
+		RelativeFilename: "t_IronFence_001.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 14905496, "Video::t_IronFence_001.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_IronFence_001.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_IronFence_001.png"
+		RelativeFilename: "t_IronFence_001.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAwCAYAAAChS3wfAAAAAXNSR0IArs4c6QAAA1tJREFUaEPtWTFrFkEQ3euSIhZfGWtJl5BKgkX+giA2YmcnoqIEbEIQGyEoKmJnJzYi+C+CVUi6YG3KrzA/IPIW3jFMdm9n9zbfnfGuOXZvZ3b37Xs7u3ON+8+fBvN//erlOXF4sbvXhMqo//Tubdvu4dNnF8rajj4t/mX/7OfP2Zm7trLiP6E/6Ue277OG2QBwULUBOD46cusbG44LgDcnBkAIgKwHILJcAoTv5P2b/XZlnzzfaUJl1KcYALvjw0O3vrnp0J4Dsvj/eXDgbm5teTtO2AoA2+88fnS+/+Fjw7cFED/IB/fveQBms5mjA5Tn87n7/OVrg+98ow0etAvZwQYP2nMAuh3K0g8G/Pv01F1fXfV+9cqyHKvvDYBFo7G9Qe8dv05O3I21NU/lnD2gSwKcuGaGBqaYARaKxqTBSfJ7DQmkVloCK/eMYgBgqCmvJSEpT4prO5QhAUqJA2W9tJNSoQSWl5a8dHIBuJISYPgDaIg8OgyjDg/rESWKGVBTAlISpVHAsnvXatNGAb0rx6KAlEZqd++KAl1+fnz/1oZl+rh9524j61GmBBmVSkBpd+oS46tg4wFIIUttoR2Q12GT9nJVsGkSoJR/OQbtPwRy39Of9NkCQIqFqKUBkNS7tb3d+oNtaMAEjm9NXQ3QIplVxIDYBLoAkFoOaTfEIgmEZFRNgKY9oCaapb66juLaZ039w/coGFAjnJWCPwoASgdfw24CoAaK/7KPaEosdP/HnQHX3tBRFSAwDNbKL+gD0mUAnQWANdVUC4BFHJCiOcFQAkRmYLqOqLVulwtjQChHx9ygTFxQAikqhm6J8vZHJrEdviEREkuopPrr8z1LAkyOyrgdOq7WkkDsP0OfCWvbIgmkBlBLAgsDQOfsYmnw1MT5PZYrJNUlk3RuMJRWt/Zb0i5LAtY9oJYESiaUa5MlAa5cqpNaEkj1U+N78M+QpijT3NZ/cbEoIHd7ptn1nyZZrjHBlI+su4BVAqlOx/Q9mBHSmxnKOT8dLTlAecjhMXqIa3EWA6wSsK5wKldo9dOnXRYA1o64kszj6TL9WJli7bek3aUAUDKQoWwmAIZCfiz9TgwYy0oMNY6JAUMhP5Z+JwaMZSWGGsfEgKGQH0u/EwPGshJDjeMvMG/YbVamuA4AAAAASUVORK5CYII="
+	}
+	Material: 94410470, "Material::t_Table_001.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 91896942, "Texture::t_Table_001.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::t_Table_001.png"
+		Media: "Video::t_Table_001.png"
+		FileName: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Table_001.png"
+		RelativeFilename: "t_Table_001.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 43079815, "Video::t_Table_001.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Table_001.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_Table_001.png"
+		RelativeFilename: "t_Table_001.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAU1JREFUWEdj3Fno8J8BB/j14w9cho2DBUWVe/8BRlz6SBFnBDlg1WsphgDeRzgtQzYQptZ3+hHGaTFmcMezsLGh2Pvn1y+GrCWnCDqSsclWF24IBzeqIT++/oIbCpODidUdvkzQcGJCAhwCsKBGD2ZkA9CjAxQFXR7G/0EOAjkGmU2MxTA1YAega8AX9zC1IAdMDrf8z87NzJA27wgKmyQHwKIAPYhBhiBHCXp0lO04C7aUmfUvOK6RHUOSA2CJMEz0GVwfvhAAJUKQWlAIzEqyAYceKARACfLvb2aG3JXHSUobKGkAZBiudIAtDSD7FJQGQHxQyJAUAqQoxqeWbAfANJLqEFJ9ist8cPYh1XJygnrUAaMhMBoCOEOAnCxITT3g8hzUeAABbI0KmGUgOZA6mBpQ+U8Nh1DFEEocMuqA0RAYDYHREBgNgdEQAAB9DrIhKrEaVgAAAABJRU5ErkJggg=="
+	}
+	Material: 48693851, "Material::t_BasicTools_001.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 49615115, "Texture::t_BasicTools_001.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::t_BasicTools_001.png"
+		Media: "Video::t_BasicTools_001.png"
+		FileName: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_BasicTools_001.png"
+		RelativeFilename: "t_BasicTools_001.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 80694309, "Video::t_BasicTools_001.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_BasicTools_001.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\Lucas Silvério\Documents\Luke Productions\05 - Produtos\PACK - Cozy Pixel Farm - Farming Starter Pack - FREE\t_BasicTools_001.png"
+		RelativeFilename: "t_BasicTools_001.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAbVJREFUWEdjZGBgYEiOifoPopHB3CXLGNHFaMEHW4LLAR3NjSgOq6itZ0RWq6quDncTSG7D2tX/N69fzwByPEgvSIyQo1EMRA+BAXUAyDGtzSJgN3158gVMq9jOwxsCyB6gOARAhlUpQYz8r8wBcUD8PHAwI1sUEBwKD2bkKCAU9DB5vGmgqqwExbK2rh6sDgClC1C8k+0A5IRIKPXjCwFifY2sDiMEfAMDGU6dPAlXA/I1LDHCUjquKKCZA9ANRnYQOZbiDQFQFCDHPSgEKLUEn36aGk6Mw0l2wM5CB3DOcO8/wNjlYQxml+04S7I5KNlw2eJFKNktKjYOp4E0cwAXFyfYUd++fWcAOQC9fiCUPYkJbmxqwD7FlrdxOWBWks3/tHlHGNFpih0AqsVAAFQOgIpXXA4AxTsoztFpihwASgN7d+4Am+Hs7oE3CtB9Pjnc8n/uyuOUJUJSXA+zEOYQqjgAVPDw8fLC3SGnoMjw6MF9BhgNkoA1LmgSBegNj0+fPzOASkBkh8HE0H1OlRAgJwrQo4IUMzDqAlI00yQKSHEAtdWSnX2o5ZBRB4yGwGgIjIYAAHoQRzA6Lj01AAAAAElFTkSuQmCC"
+	}
+}
+
+; Object connections
+;------------------------------------------------------------------
+
+Connections:  {
+	C: "OO",78713839,0
+	C: "OO",20976102,78713839
+	C: "OO",84024821,20976102
+	C: "OO",7059830,20976102
+	C: "OO",59734362,78713839
+	C: "OO",29532136,59734362
+	C: "OO",7059830,59734362
+	C: "OO",92685178,78713839
+	C: "OO",26830731,92685178
+	C: "OO",7059830,92685178
+	C: "OP",16161662,96321444, "DiffuseColor"
+	C: "OO",48289985,16161662
+	C: "OP",3717210,90477414, "DiffuseColor"
+	C: "OO",87652914,3717210
+	C: "OP",50738649,7059830, "DiffuseColor"
+	C: "OO",63173417,50738649
+	C: "OP",87363167,80516277, "DiffuseColor"
+	C: "OO",4649376,87363167
+	C: "OP",47667333,7881448, "DiffuseColor"
+	C: "OO",60031237,47667333
+	C: "OP",40977382,36221795, "DiffuseColor"
+	C: "OO",23623975,40977382
+	C: "OP",69246380,71075968, "DiffuseColor"
+	C: "OO",11840073,69246380
+	C: "OP",29123838,46482949, "DiffuseColor"
+	C: "OO",73281644,29123838
+	C: "OP",99939814,32690592, "DiffuseColor"
+	C: "OO",9864575,99939814
+	C: "OP",96884967,81985135, "DiffuseColor"
+	C: "OO",64862408,96884967
+	C: "OP",63159017,13150615, "DiffuseColor"
+	C: "OO",58808960,63159017
+	C: "OP",16034180,3933963, "DiffuseColor"
+	C: "OO",14905496,16034180
+	C: "OP",91896942,94410470, "DiffuseColor"
+	C: "OO",43079815,91896942
+	C: "OP",49615115,48693851, "DiffuseColor"
+	C: "OO",80694309,49615115
+}
+
+; Takes section
+;------------------------------------------------------------------
+
+Takes:  {
+	Current: ""
+}
